@@ -1,4 +1,4 @@
-remote_theme: sighingnow/jekyll-gitbook
+theme: minima
 
 # Configurations
 title: Himanshu Shankar
