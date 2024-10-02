@@ -188,11 +188,11 @@ Sweet2th is a hyperlocal marketplace for the Indian bakery industry, connecting 
 
 ## Education
 
-- **[WorldQuant University](https://www.wqu.edu/)** | Masters of Science in Financial Engineering | 2022 (Drop Out)
-  - Courses: 3/10 (94%)
+| **[WorldQuant University](https://www.wqu.edu/)** | Masters of Science in Financial Engineering | 2022 (Drop Out) |
+| Courses: 3/10 (94%) |
 
-- **[SRM Institute of Science and Technology](https://www.srmist.edu.in/)** | Bachelor of Technology in Computer Science and Engineering | 2014 - 2018
-  - First Division with Distinction (CGPA: 8.98 / 10)
+| **[SRM Institute of Science and Technology](https://www.srmist.edu.in/)** | Bachelor of Technology in Computer Science and Engineering | 2014 - 2018 |
+| First Division with Distinction (CGPA: 8.98 / 10) |
 
 ## Recommendation & References
 
