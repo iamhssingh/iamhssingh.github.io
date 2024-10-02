@@ -3,11 +3,7 @@ theme: jekyll-theme-hacker
 # Configurations
 title: Himanshu Shankar
 longtitle: Himanshu Shankar - Dont ask for LinkedIn please
-author: Himanshu Shankar
 email: reach@himanshus.com
 
 social:
   github:         iamhssingh
-
-toc:
-    enabled: true
