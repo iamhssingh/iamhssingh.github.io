@@ -4,8 +4,6 @@ title: "Himanshu Shankar"
 permalink: /
 ---
 
-# Himanshu Shankar
-
 **Let's get in touch**
 
 [📧 Mail Me](mailto:reach@himanshus.com) | [GitHub](https://github.com/iamhssingh) | 🌍 India
