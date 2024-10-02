@@ -1,6 +1,5 @@
 ---
-layout: post
-title: "Himanshu Shankar"
+layout: home
 permalink: /
 ---
 
