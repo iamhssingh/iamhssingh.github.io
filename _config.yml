@@ -1,14 +1,13 @@
+remote_theme: sighingnow/jekyll-gitbook
+
 # Configurations
-title:            Himanshu Shankar
-longtitle:        Himanshu Shankar - Dont ask for LinkedIn please
-author:           Himanshu Shankar
-email:            reach@himanshus.com
-description: >
-  My homepage based on Jekyll Gitbook. Needs update and some work, but I am too busy to update this. Also, I want to get off all social network but people keep on asking my LinkedIn. So maybe, this will save me.
+title: Himanshu Shankar
+longtitle: Himanshu Shankar - Dont ask for LinkedIn please
+author: Himanshu Shankar
+email: reach@himanshus.com
 
-url:              'https://iamhssingh.github.io'
-
-remote_theme:     sighingnow/jekyll-gitbook
+toc:
+    enabled: true
 
 social:
   github:         iamhssingh
