@@ -84,8 +84,19 @@ These experiences highlight my adaptability, diverse skill set, and ability to b
 
 ### Consulting Engagements
 
+#### [Deckers Brands](https://www.deckers.com/)
+**Engineering Lead - Consultant (via Toptal)**  
+
+- Led a cross-functional engineering team (3 developers, 1 PM, 2 QA) to build Deckers’ Allocation & Replenishment Tool, replacing manual Python-based workflows with a robust, scalable platform.
+- Delivered MVP to production in just 2 months, one of the fastest rollout in Deckers' history. The product became one of the most impactful internal tools, receiving praise from multiple departments across the company.
+- Deployed on AWS Serverless stack: Lambda, RDS, S3, API Gateway, EventBridge, used CloudFormation templates for seamless multi-account, multi-region deployments with secure resource tagging and least-privilege access that successfully passed audit.
+- Maintained 90%+ unit test coverage using Pytest for Python-based serverless application.
+- Scaled ingestion of complex Excel-based SKU datasets using NumPy and Pandas.
+- Integrated with legacy Oracle RMS system through SOAP APIs.
+- Deployed the application across 4 major regions using multi-tenancy architecture: North America (US & Canada), EMEA, Japan, and China. The multi-tenancy architecture saved infrastructure costs by removing the need for parallel deployments.
+
 #### [Boston Consulting Group (BCG) - Gamma](https://www.bcg.com/beyond-consulting/bcg-gamma/default)
-**Senior Software Engineer - Consultant**
+**Senior Software Engineer - Consultant (via Toptal)**
 
 - Individually developed entire backend, ensuring ORM-level optimization and achieving SLAs on RESTful APIs.
 - Provided critical input in KMP meetings on technical feasibility and production system design.
@@ -117,7 +128,7 @@ These experiences highlight my adaptability, diverse skill set, and ability to b
 - Effectively communicated with Icelandic team, overcoming language barriers.
 
 #### Orsy Inc
-**Senior Software Engineer - Consultant**
+**Senior Software Engineer - Consultant (via Toptal)**
 
 - Developed Social Media - Streaming Platform for live news and events telecast backed by Cryptocurrency.
 - Maintained 95%+ branch coverage using test-driven development approach.
