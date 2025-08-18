@@ -3,38 +3,41 @@ layout: home
 permalink: /
 ---
 
-**Let's get in touch**
+**Let's build your tech + your team: quick, fast, and scalable**
 
 [📧 Mail Me](mailto:reach@himanshus.com) | [GitHub](https://github.com/iamhssingh) | 🌍 India
 
 ## Summary
 
-Lead Software Engineer with 9+ years of experience. An ENTP, according to Jung's and Briggs Myers' theories of personality type!
+Engineer–founder and **Engineering multiplier** with 10+ years leading fully remote senior teams and shipping enterprise software for Fortune 500s. Ex–Director of Engineering at Certa; now focused on creating the autopilot for delivery: an AI that orchestrates work, surfaces risk early, and compresses cycle time.
 
-- Led a 100% distributed team of senior software engineers to build an enterprise no-code platform
-- Lead engineering initiatives on products being used by Fortune 500 companies, including Dun & Bradstreet, Box, VISA, Boeing
-- Worked with one of the Big Three Management Consultancies: [The BCG](https://www.bcg.com/)
-- Built products for the other two of the Top 3 Big Management Consultancy Firms: [McKinsey](https://www.mckinsey.com/), [Bain & Company](https://www.bain.com/)
-- Provided Software Engineering Consultancy to [LedgerX](https://www.ledgerx.com/) around building one of the first CFTC-approved clearing products serving the Crypto industry in the US Market
-- Commanded the development of versatile products serving the real estate, finance & retail chain sector in the Indian industry
-- Author and Contributor of [DRF-User](https://github.com/101Loop/drf-user), winner of PyCharm's 10 Year of Code contest
-- Open Session Speaker at [PyCon 2018](https://in.pycon.org/2018/) and [2020](https://in.pycon.org/2020/)
-- Guest Speaker & Judge at NIT Hamirpur's Electrothon, SRM University's WeClub Initiative, NIET's Electronics Tech Community Inauguration
-- Mentored the SIH-2018 winner team and SIH-2020 finalist team
+- **Scaled Certa engineering 5 → 50** while establishing a remote-first, high-trust culture across Backend, DevOps, and QA; mentored & managed Scrum Masters.
+- Led Certa’s **top-performing Backend+DevOps group** for consecutive years; ran platform with **P99 < 100 ms**, 200 ms SLA, and **90%+ test coverage**; passed SOC & third-party pen-tests.
+- **Reduced sprint spillovers ~40%** and improved on-time delivery **~20–30 pp** by making commitments explicit and automating follow-ups.
+- **Cut cycle time ~30%** and saved **~1–2 hrs/IC/week** in status meetings by shifting toward async, conversation-driven ops.
+- Client-facing engineering lead: shaped features live on enterprise calls; proposed solutions saw **high executive adoption** across multiple F500 accounts.
+- Built & scaled QA processes (coverage gates, risk-based testing), **reducing escaped defects ~35%** and stabilizing releases.
+- **Deckers Brands:** Engineering Lead; shipped Allocation & Replenishment platform **to production in 2 months**, rolled out to **4 regions** (NA, EMEA, JP, CN) with **90%+ unit test coverage** on AWS Serverless.
+- **LedgerX:** engineered CFTC-compliant reporting & crypto clearing; **boosted DRF API performance up to 4×**; integrated Plaid & Modern Treasury.
+- **101Lease:** drove **125% revenue lift** and **80% lead-ops headcount reduction** in 60 days for SafeHoms; another deployment saw **120% revenue growth in Q1**.
+- Advisor to multiple orgs on remote engineering culture and delivery ops, contributing to **~15–25% throughput gains** via process, QA, and SRE practices.
 
 ## Experience
 
 ### [Opinr Inc d.b.a. CERTA](https://www.getcerta.com/)
 **Director of Engineering** | Remote | 2019
 
-- Led a 100% distributed Senior Software Engineer's team to achieve an SLA of max 200ms on all RESTful APIs of the platform. Achieved a P99 of less than 100ms on multiple endpoints.
-- Led the team to build versatile features for NoCode Workflow Engine, such as Adjudication, Integration Polling, SSO, etc.
-- Drove the development of generic integration serverless micro-service to allow seamless integration of Certa with 3rd Party Enterprise Products. Notable integrations include names like [NetSuite](https://www.netsuite.com/), [DnB](https://www.dnb.com/), and [RDC](https://rdc.com/).
-- Drove the development of the Audit Log micro-service to support high write throughput using Serverless on AWS Stack.
-- Operated with the team to achieve many 3rd party certifications as SOC, cleared 3rd party pen-testing of the platform, and load testing of the platform by one of the clients.
-- Achieved 90%+ test coverage, which led to an increase in the stability of the product.
-- Brainstormed with key stakeholders on adding and evolving features to the generic NoCode Workflow Engine of Certa.
-- Started FOSS initiative within the company for team's personal growth, company's culture marketing to help hire talent, and give back to the tech community.
+- Scaled the engineering org **from 5 → 50** while establishing a remote-first, high-trust culture (hiring bar, career ladders, async rituals).
+- Led Certa’s **top-performing Backend+DevOps group** for consecutive years; ran platform with **P99 < 100 ms** and org-wide **200 ms SLA**; maintained **90%+** automated test coverage.
+- **Reduced sprint spillovers ~40%** and **improved on-time delivery ~20–30 pp** by making commitments explicit, automating follow-ups, and tightening release gates.
+- **Cut cycle time ~30%** and **saved ~1–2 hrs/IC/week** in status meetings by shifting to conversation-first, async execution.
+- **Built and scaled QA** (coverage gates, risk-based testing, release checklists) → **escaped defects ↓ ~35%** and steadier releases.
+- **Mentored & managed Scrum Masters**; standardized ceremonies and metrics to increase flow efficiency and predictability.
+- **Client-facing engineering lead** on F500 accounts; co-designed features live on calls and drove solutions that consistently won executive adoption.
+- Shipped major **No-Code Workflow Engine** capabilities (Adjudication, Integration Polling, SSO, etc.) used across enterprise deployments.
+- Designed a **serverless integration microservice** enabling plug-in connectors; delivered **NetSuite, DnB, RDC** and cut integration lead times from weeks to days.
+- Built a **high-throughput Audit Log microservice** on AWS Serverless for compliance and traceability; passed SOC audits, third-party pen-tests, and client load tests.
+- Started an internal **FOSS initiative** to grow engineers, support hiring brand, and give back to the community (e.g., contributions to DRF-User).
 
 ### [Vitartha LLP](https://vitartha.com)
 **Founder** | 2018 - 2019
@@ -80,20 +83,21 @@ These memberships underscore my standing in the global tech community and valida
 - **Business Scaling**: Successfully scaled a cafe chain in NOIDA from 1 outlet to 10 outlets in 2019, demonstrating business acumen and operational management skills beyond the tech sector.
 
 These experiences highlight my adaptability, diverse skill set, and ability to bridge the gap between technology and practical business operations.
-(Thanks to Claude 3.5 Sonnet for nicely articulating this)
 
 ### Consulting Engagements
 
 #### [Deckers Brands](https://www.deckers.com/)
 **Engineering Lead - Consultant (via Toptal)**  
 
-- Led a cross-functional engineering team (3 developers, 1 PM, 2 QA) to build Deckers’ Allocation & Replenishment Tool, replacing manual Python-based workflows with a robust, scalable platform.
-- Delivered MVP to production in just 2 months, one of the fastest rollout in Deckers' history. The product became one of the most impactful internal tools, receiving praise from multiple departments across the company.
-- Deployed on AWS Serverless stack: Lambda, RDS, S3, API Gateway, EventBridge, used CloudFormation templates for seamless multi-account, multi-region deployments with secure resource tagging and least-privilege access that successfully passed audit.
-- Maintained 90%+ unit test coverage using Pytest for Python-based serverless application.
-- Scaled ingestion of complex Excel-based SKU datasets using NumPy and Pandas.
-- Integrated with legacy Oracle RMS system through SOAP APIs.
-- Deployed the application across 4 major regions using multi-tenancy architecture: North America (US & Canada), EMEA, Japan, and China. The multi-tenancy architecture saved infrastructure costs by removing the need for parallel deployments.
+- Led a cross-functional team (3 devs, 1 PM, 2 QA) and co-owned the roadmap with Planning & Supply Chain; shipped MVP → production in ~2 months—among the fastest rollouts at Deckers—and drove adoption across departments.
+- Replaced fragile manual Python workflows with a robust Allocation & Replenishment platform, eliminating error-prone handoffs and standardizing allocation decisions with clear audit trails.
+- Established sprint cadence, DRI ownership, code-review SLAs, and quality gates; maintained **90%+ unit test coverage** with Pytest, reducing rework and stabilizing releases.
+- Built on **AWS Serverless** (Lambda, API Gateway, EventBridge, S3, RDS) with end-to-end **CloudFormation**; enforced least-privilege access and resource tagging that **passed audit**.
+- Scaled ingestion of large, complex Excel-based SKU datasets (NumPy, Pandas) with resilient data pipelines.
+- Integrated with legacy **Oracle RMS** via SOAP using fault-tolerant adapters to handle schema drift and latency.
+- Deployed across **North America, EMEA, Japan, and China** using a **multi-tenant** architecture, materially reducing infra cost versus parallel regional stacks.
+- Implemented structured logging, dashboards, and operational runbooks, improving observability and incident response.
+- Outcome: became one of the **most impactful internal tools**, materially reducing manual effort in planning and replenishment cycles.
 
 #### [Boston Consulting Group (BCG) - Gamma](https://www.bcg.com/beyond-consulting/bcg-gamma/default)
 **Senior Software Engineer - Consultant (via Toptal)**
@@ -196,8 +200,8 @@ Sweet2th is a hyperlocal marketplace for the Indian bakery industry, connecting 
 
 ## Education
 
-| **[WorldQuant University](https://www.wqu.edu/)** | Masters of Science in Financial Engineering | 2022 (Drop Out) |
-| Courses: 3/10 (94%) |
+| **[WorldQuant University](https://www.wqu.edu/)** | Masters of Science in Financial Engineering | 2022 |
+| Withdrew after 3/10 courses (94%) |
 
 | **[SRM Institute of Science and Technology](https://www.srmist.edu.in/)** | Bachelor of Technology in Computer Science and Engineering | 2014 - 2018 |
 | First Division with Distinction (CGPA: 8.98 / 10) |
