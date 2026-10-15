@@ -8,7 +8,7 @@ body_class: category-page
 <header class="page-hero">
   <p class="eyebrow">Experience</p>
   <h1>Building the system around the software.</h1>
-  <p class="page-intro">Employment history across engineering leadership, company building, and product execution. Certa is the flagship story: joining at the founding-engineer stage, growing into Director of Engineering, and helping a distributed compliance startup scale through Series B.</p>
+  <p class="page-intro">A career spanning hands-on architecture, engineering management, and zero-to-one company building. The through-line is broad ownership: complex systems, high-accountability teams, and measurable outcomes.</p>
   <div class="page-kicker" aria-label="Experience themes">
     <span>Remote organizations</span>
     <span>Engineering management</span>
@@ -27,8 +27,27 @@ body_class: category-page
     <details class="entry-card" open>
       <summary>
         <span>
+          <span class="entry-title">GetLoopie.ai</span>
+          <span class="entry-meta">Co-Founder · Bengaluru, India · Feb 2025 - Mar 2026</span>
+        </span>
+      </summary>
+      <div class="entry-body">
+        <p class="entry-callout">Built a headless agentic engine for engineering workflows and took it from concept through five pilots, owning architecture, backend, integrations, deployment, and product validation.</p>
+        <ul>
+          <li>Built workflow execution across Slack, Linear, Jira, Teams, Notion, and Fathom.</li>
+          <li>Designed event-driven tool selection and a Work Graph ingestion pipeline for context assembly and real-time commitment tracking.</li>
+          <li>Scoped retrieval permissions across direct messages and private channels using Qdrant filtering, semantic search, and LLM reranking.</li>
+          <li>Used spec-driven development with Claude Code and Codex to turn product requirements into reviewed implementation plans.</li>
+          <li>Built with FastAPI, PostgreSQL, MongoDB, Redis, Qdrant, Celery, APScheduler, OpenAI Agents SDK, and Hetzner.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="entry-card">
+      <summary>
+        <span>
           <span class="entry-title">Opinr Inc. d.b.a. <a href="https://www.getcerta.com/">Certa</a></span>
-          <span class="entry-meta">Founding engineer → Director of Engineering · Remote · 2019</span>
+          <span class="entry-meta">Founding Backend Engineer → Director of Engineering · Remote · Jun 2019 - Feb 2025</span>
         </span>
       </summary>
       <div class="entry-body">
@@ -74,7 +93,7 @@ body_class: category-page
       <summary>
         <span>
           <span class="entry-title">Civil Machines Technologies Private Limited · Earlier experience</span>
-          <span class="entry-meta">Tech Lead · NOIDA, India · 2014 - 2019</span>
+          <span class="entry-meta">Technology Lead · Noida, India · Oct 2014 - Dec 2018</span>
         </span>
       </summary>
       <div class="entry-body">

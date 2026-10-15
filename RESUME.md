@@ -19,7 +19,7 @@ Engineering leader and founder with 10+ years of experience building remote team
 
 ## Experience
 
-### Certa (Opinr Inc.) — Founding Engineer → Director of Engineering
+### Certa (Opinr Inc.): Founding Engineer → Director of Engineering
 
 **Remote · Joined 2019**
 
@@ -33,14 +33,14 @@ Engineering leader and founder with 10+ years of experience building remote team
 - Designed a serverless integration service and delivered NetSuite, Dun & Bradstreet, and RDC connectors, reducing integration lead time from weeks to days.
 - Built a high-throughput AWS Serverless audit-log service that passed SOC audits, third-party penetration tests, and client load tests.
 
-### Vitartha LLP — Founder
+### Vitartha LLP: Founder
 
 **2018–2019**
 
 - Founded a product company focused on personal-finance and expense-management tools.
 - Launched Hisab Kitab, reaching **5,000+ Android downloads** and **500+ active users organically** within three months.
 
-### Civil Machines Technologies Pvt. Ltd. — Tech Lead
+### Civil Machines Technologies Pvt. Ltd.: Tech Lead
 
 **NOIDA, India · 2014–2019**
 
@@ -51,22 +51,22 @@ Engineering leader and founder with 10+ years of experience building remote team
 
 ## Selected Consulting
 
-### Deckers Brands — Engineering Lead via Toptal
+### Deckers Brands: Engineering Lead via Toptal
 
 - Led a cross-functional team from MVP to production in approximately **two months**, then supported rollout across North America, EMEA, Japan, and China.
 - Built a multi-tenant Allocation & Replenishment platform on AWS Serverless with 90%+ unit-test coverage, resilient data pipelines, Oracle RMS integration, observability, and audit-ready infrastructure.
 
-### BCG Gamma — Senior Software Engineer via Toptal
+### BCG Gamma: Senior Software Engineer via Toptal
 
 - Owned the backend and system architecture for an oil-price prediction platform for a global oil producer.
 - Optimized ORM and REST API performance and translated model-driven requirements into a production system.
 
-### LedgerX — Senior Software Engineer
+### LedgerX: Senior Software Engineer
 
 - Built automated CFTC-compliant reporting, clearing workflows, transaction trails, and a feedback loop for interdependent report assertions.
 - Improved Django REST Framework API performance by up to **400%** and integrated Plaid and Modern Treasury.
 
-### Carta Healthcare — Senior Software Engineer
+### Carta Healthcare: Senior Software Engineer
 
 - Built a third-party certification interface for a FHIR-based data repository and helped achieve NCDR CathPCI certification.
 - Optimized Flask APIs to **P99 < 100 ms** and increased test coverage.
@@ -77,7 +77,7 @@ Engineering leadership · Remote organizations · Hiring and career systems · D
 
 ## Education & Recognition
 
-**B.Tech, Computer Science and Engineering** — SRM Institute of Science and Technology, 2014–2018  
+**B.Tech, Computer Science and Engineering**: SRM Institute of Science and Technology, 2014–2018
 First Division with Distinction · CGPA 8.98/10
 
 **Professional recognition:** IEEE Senior Member · Django Software Foundation Individual Member · Python Software Foundation Member · ACM Member · Institution of Engineers (India) Member

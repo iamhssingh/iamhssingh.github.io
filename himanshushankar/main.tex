@@ -1,0 +1,24 @@
+\documentclass{resume}
+
+% Consulting engagements are maintained as a separate content library.
+% Enable them only when they strengthen a specific job application.
+\newif\ifincludeconsulting
+\includeconsultingfalse
+
+% Identity and PDF metadata are set before \begin{document}
+% so that \resumemetadata can call \hypersetup at the right time.
+\input{content/identity}
+
+\begin{document}
+\makecvheader
+
+\input{content/summary}
+\input{content/skills}
+\input{content/experience}
+\ifincludeconsulting
+  \input{content/consulting}
+\fi
+\input{content/education}
+\input{content/honors}
+
+\end{document}

@@ -7,8 +7,8 @@ body_class: category-page
 
 <header class="page-hero">
   <p class="eyebrow">Venture + product</p>
-  <h1>Complete builds, durable outcomes, honest lessons.</h1>
-  <p class="page-intro">These case studies add product and technical depth to work already represented elsewhere. They include a completed AI venture, earlier founding-engineer initiatives, and open source; none is presented as a current role.</p>
+  <h1>Products built from first principles.</h1>
+  <p class="page-intro">Selected zero-to-one products, business platforms, and open-source work. Each is included for the architecture, product judgment, or measurable outcome it demonstrates.</p>
   <div class="page-kicker" aria-label="Project themes">
     <span>AI product</span>
     <span>Product systems</span>
@@ -27,17 +27,17 @@ body_class: category-page
     <details class="entry-card" open>
       <summary>
         <span>
-          <span class="entry-title">Loopie · Venture + Product</span>
-          <span class="entry-meta">Co-Founder · End-to-end AI product · Venture concluded</span>
+          <span class="entry-title">GetLoopie.ai · Agentic engineering workflows</span>
+          <span class="entry-meta">Co-Founder · Feb 2025 - Mar 2026</span>
         </span>
       </summary>
       <div class="entry-body">
-        <p class="entry-callout">Loopie did not continue as a commercial startup, but it produced a complete AI product and the full founder journey from problem definition through product execution.</p>
+        <p class="entry-callout">A headless agentic engine that executed engineering workflows across the tools where teams already worked, taken from concept through five pilots.</p>
         <ul>
-          <li>Built an AI execution layer intended to orchestrate team work, make commitments explicit, surface delivery risk early, and compress cycle time.</li>
-          <li>Translated years of distributed-team and delivery-operations experience into a cohesive product rather than a prototype or isolated feature.</li>
-          <li>Worked across product definition, system design, execution workflows, and the operating assumptions needed to support real teams.</li>
-          <li>The commercial outcome was not the intended one; the completed build remains evidence of zero-to-one product judgment, AI product execution, and founder-level ownership.</li>
+          <li>Designed event-driven tool selection across Slack, Linear, Jira, Teams, Notion, and Fathom.</li>
+          <li>Built a Work Graph ingestion pipeline for context assembly and real-time commitment tracking.</li>
+          <li>Implemented permission-aware retrieval across direct messages and private channels using Qdrant filtering, Top-K semantic search, and LLM reranking.</li>
+          <li>Owned architecture, backend, integrations, deployment, pilot delivery, and product validation.</li>
         </ul>
       </div>
     </details>

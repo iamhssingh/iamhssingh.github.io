@@ -1,8 +1,8 @@
 title: Himanshu Shankar
-description: Engineering leader, founder, and execution partner for ambitious teams.
+description: Staff Engineer and Senior Engineering Manager building AI, enterprise workflow, integration, and regulated platforms.
 url: https://himanshus.com
 baseurl: ""
-email: reach@himanshus.com
+email: me@himanshus.com
 
 social:
   github: iamhssingh
@@ -18,5 +18,11 @@ defaults:
 
 exclude:
   - README.md
+  - CV.md
+  - RESUME.md
   - Gemfile
   - Gemfile.lock
+  - himanshushankar/build
+  - himanshushankar/content
+  - himanshushankar/main.tex
+  - himanshushankar/resume.cls

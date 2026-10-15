@@ -3,3 +3,14 @@ _site/
 .jekyll-cache/
 .sass-cache/
 vendor/
+.DS_Store
+.idea/
+
+# Keep LaTeX sources and the published PDF; ignore compiler output.
+himanshushankar/build/
+himanshushankar/*.aux
+himanshushankar/*.fdb_latexmk
+himanshushankar/*.fls
+himanshushankar/*.log
+himanshushankar/*.out
+himanshushankar/*.synctex.gz
