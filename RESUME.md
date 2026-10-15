@@ -1,12 +1,12 @@
 # Himanshu Shankar
 
-**Engineering Leader · Founder · Execution Partner**
+**Staff Engineer · Senior Engineering Manager**
 
-[himanshus.com](https://himanshus.com) · [reach@himanshus.com](mailto:reach@himanshus.com) · [GitHub](https://github.com/iamhssingh)
+[himanshus.com](https://himanshus.com) · [me@himanshus.com](mailto:me@himanshus.com) · [GitHub](https://github.com/iamhssingh) · [LinkedIn](https://www.linkedin.com/in/iamhssingh)
 
 ## Summary
 
-Engineering leader and founder with 10+ years of experience building remote teams, enterprise platforms, and products in regulated and globally distributed environments. Scaled Certa's engineering organization from 5 to 50, led high-performing Backend and DevOps teams, and shipped systems across third-party risk, financial markets, retail supply chains, healthcare, and AI. Strong at connecting technical depth, organizational design, client trust, and measurable business execution.
+Hands-on engineering leader with 11+ years building production platforms across AI orchestration, enterprise workflows, integrations, and regulated systems. Scaled Certa's engineering organization from 5 to 50, led Backend and DevOps through four leads, and remained close to architecture, code, reliability, and customer outcomes.
 
 ## Selected Impact
 
@@ -19,9 +19,17 @@ Engineering leader and founder with 10+ years of experience building remote team
 
 ## Experience
 
+### GetLoopie.ai: Co-Founder
+
+**Bengaluru, India · February 2025–March 2026**
+
+- Built a headless agentic engine across Slack, Linear, Jira, Teams, Notion, and Fathom.
+- Designed event-driven tool selection, Work Graph ingestion, and permission-aware retrieval with Qdrant and LLM reranking.
+- Took the product from concept through five pilots, owning architecture, backend, integrations, deployment, and validation.
+
 ### Certa (Opinr Inc.): Founding Engineer → Director of Engineering
 
-**Remote · Joined 2019**
+**Remote · June 2019–February 2025**
 
 - Grew with Certa from its founding-engineer stage through Series B, expanding responsibility across engineering management, delivery, quality, platform reliability, enterprise clients, and regulated workflows.
 - Led the company's top-performing Backend and DevOps group for consecutive years and managed and mentored Scrum Masters.
@@ -42,7 +50,7 @@ Engineering leader and founder with 10+ years of experience building remote team
 
 ### Civil Machines Technologies Pvt. Ltd.: Tech Lead
 
-**NOIDA, India · 2014–2019**
+**Noida, India · October 2014–December 2018**
 
 - Led enterprise-product development, product architecture, stakeholder discovery, Agile delivery, and engineering teams.
 - Contributed at a co-founder/founding-engineer level to 101Lease, a modular asset-management platform adapted into four successful spin-offs.

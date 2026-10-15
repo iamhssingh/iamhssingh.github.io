@@ -1,12 +1,12 @@
 # Himanshu Shankar
 
-**Engineering Leader · Founder · Execution Partner**
+**Staff Engineer · Senior Engineering Manager**
 
-[himanshus.com](https://himanshus.com) · [reach@himanshus.com](mailto:reach@himanshus.com) · [GitHub](https://github.com/iamhssingh)
+[himanshus.com](https://himanshus.com) · [me@himanshus.com](mailto:me@himanshus.com) · [GitHub](https://github.com/iamhssingh) · [LinkedIn](https://www.linkedin.com/in/iamhssingh)
 
 ## Professional Profile
 
-Engineer, founder, and engineering multiplier with 10+ years of experience leading fully remote senior teams and shipping enterprise software in regulated, globally distributed environments. Experienced across engineering management, organizational design, zero-to-one product development, enterprise client work, platform reliability, quality systems, and business operations.
+Hands-on engineering leader with 11+ years building production platforms across AI orchestration, enterprise workflows, integrations, and regulated systems. Scaled engineering organizations from founding stage through Series B while remaining close to architecture, code, reliability, and customer outcomes.
 
 Built products used by all three major management-consulting firms: work used by teams at Bain and McKinsey, and consulting work with BCG Gamma. Domain experience includes third-party risk management, supply-chain risk, AML and anti-bribery controls, regulated financial-market infrastructure, retail allocation and replenishment, healthcare certification, marketplaces, and AI-enabled execution.
 
@@ -24,9 +24,17 @@ Built products used by all three major management-consulting firms: work used by
 
 ## Employment
 
+### GetLoopie.ai: Co-Founder
+
+**Bengaluru, India · February 2025–March 2026**
+
+- Built a headless agentic engine that executed engineering workflows across Slack, Linear, Jira, Teams, Notion, and Fathom.
+- Designed event-driven tool selection, Work Graph ingestion, and permission-aware retrieval using Qdrant filtering, semantic search, and LLM reranking.
+- Took the containerized product from concept through five pilots, owning architecture, backend, integrations, deployment, and validation.
+
 ### Certa (Opinr Inc.): Founding Engineer → Director of Engineering
 
-**Remote · Joined 2019**
+**Remote · June 2019–February 2025**
 
 Joined at the founding-engineer stage and grew with the company through Series B, expanding the role across people, delivery, quality, operations, enterprise clients, regulated workflows, and platform reliability.
 
@@ -56,7 +64,7 @@ Joined at the founding-engineer stage and grew with the company through Series B
 
 ### Civil Machines Technologies Pvt. Ltd.: Tech Lead
 
-**NOIDA, India · 2014–2019**
+**Noida, India · October 2014–December 2018**
 
 - Led the development of enterprise products for Indian businesses.
 - Worked with stakeholders and industry experts on discovery, product architecture, ideation, Agile delivery, and implementation.
@@ -100,7 +108,7 @@ Joined at the founding-engineer stage and grew with the company through Series B
 - Built a third-party certification-system interface for a FHIR-based data repository.
 - Optimized Flask APIs to P99 below 100 ms.
 - Helped achieve NCDR CathPCI certification.
-- Increased test coverage by seven percentage points and improved engineering processes.
+- Increased automated test coverage by approximately 23 percentage points to 85%+.
 
 ### Já, Iceland: Full-Stack Software Engineer
 
@@ -117,14 +125,13 @@ Joined at the founding-engineer stage and grew with the company through Series B
 
 ## Ventures and Product Work
 
-### Loopie: Co-Founder
+### GetLoopie.ai: Co-Founder
 
-**End-to-end AI product · Venture concluded**
+**February 2025–March 2026 · Venture concluded**
 
-- Built an AI execution layer designed to orchestrate teamwork, make commitments explicit, surface delivery risk, and shorten cycle time.
-- Turned years of distributed-team and delivery-operations experience into a complete product.
-- Worked across product definition, system design, execution workflows, and operating assumptions.
-- Completed the full zero-to-one founder journey; although the venture did not continue commercially, the build demonstrates AI product execution and founder-level ownership.
+- Built a headless agentic engine for engineering workflows across Slack, Linear, Jira, Teams, Notion, and Fathom.
+- Designed event-driven tool selection, a Work Graph ingestion pipeline, and permission-aware retrieval with Qdrant and LLM reranking.
+- Took the product from concept through five pilots and owned architecture, backend, integrations, deployment, and validation.
 
 ### 101Lease: Co-Founder / Founding Engineer-Level Initiative
 
