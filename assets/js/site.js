@@ -20,6 +20,21 @@
       }
     });
 
+    var trigger = quickSummary.querySelector("summary");
+
+    quickSummary.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && quickSummary.open) {
+        quickSummary.open = false;
+        trigger.focus();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (quickSummary.open && !quickSummary.contains(event.target)) {
+        quickSummary.open = false;
+      }
+    });
+
     copyButton.hidden = false;
   }
 

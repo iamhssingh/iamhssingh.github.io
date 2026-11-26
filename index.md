@@ -18,14 +18,17 @@ Then ask me: “What are you hiring for, building, or looking for help with?” 
   <p class="hero-intro">{{ portfolio.intro | escape }}</p>
   <a class="contact-button" href="mailto:{{ site.email }}">Let’s talk</a>
   <details class="quick-summary" data-quick-summary>
-    <summary>Get a quick summary</summary>
-    <div class="quick-summary-actions">
-      <a href="https://chatgpt.com/?q={{ summary_query }}" rel="noopener noreferrer" target="_blank">Open in ChatGPT</a>
-      <a href="https://claude.ai/new?q={{ summary_query }}" rel="noopener noreferrer" target="_blank">Open in Claude</a>
-      <button type="button" data-copy-prompt hidden>Copy prompt</button>
+    <summary><span aria-hidden="true">✦</span> Ask AI</summary>
+    <div class="quick-summary-panel">
+      <p class="quick-summary-title">Get a quick summary</p>
+      <div class="quick-summary-actions">
+        <a href="https://chatgpt.com/?q={{ summary_query }}" rel="noopener noreferrer" target="_blank">Open in ChatGPT</a>
+        <a href="https://claude.ai/new?q={{ summary_query }}" rel="noopener noreferrer" target="_blank">Open in Claude</a>
+        <button type="button" data-copy-prompt hidden>Copy prompt</button>
+      </div>
+      <p class="quick-summary-status" role="status"></p>
+      <textarea aria-label="Portfolio summary prompt" rows="6" readonly hidden>{{ summary_prompt | escape }}</textarea>
     </div>
-    <p class="quick-summary-status" role="status"></p>
-    <textarea aria-label="Portfolio summary prompt" rows="6" readonly hidden>{{ summary_prompt | escape }}</textarea>
   </details>
 </section>
 
