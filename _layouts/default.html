@@ -24,8 +24,9 @@
       <div class="header-inner">
         <a class="identity" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ site.title | escape }}</a>
         <nav class="site-nav" aria-label="Portfolio">
-          <a href="{{ '/work/' | relative_url }}"{% if page.url == '/work/' %} aria-current="page"{% elsif page.study_id %} aria-current="true"{% endif %}>Work</a>
+          <a href="{{ '/work/' | relative_url }}"{% if page.url == '/work/' %} aria-current="page"{% elsif page.study_id %} aria-current="true"{% endif %}>Case Studies</a>
           <a href="{{ '/experience/' | relative_url }}"{% if page.url == '/experience/' %} aria-current="page"{% endif %}>Experience</a>
+          <a href="{{ '/recognitions/' | relative_url }}"{% if page.url == '/recognitions/' %} aria-current="page"{% endif %}>Recognitions</a>
           <a href="{{ '/himanshushankar/main.pdf' | relative_url }}">Résumé</a>
           <a href="mailto:{{ site.email }}">Contact</a>
         </nav>

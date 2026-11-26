@@ -3,8 +3,8 @@ intro: I led product engineering at GetLoopie.ai, the agent startup I co-founded
 fit: I work best with teams that need someone to own the architecture, stay close to the code, and work directly with customers as the product grows.
 
 home:
-  featured: getloopie
-  supporting:
+  case_studies:
+    - getloopie
     - certa-data-ai
     - certa-audit-logging
   leadership:
@@ -36,11 +36,10 @@ work:
   - id: getloopie
     group: applied-ai
     title: GetLoopie.ai
-    feature_title: An agent that follows engineering work across tools
     role: Co-founder focused on product engineering, backend, integrations, deployment, and validation
     category: Agent systems and evaluation
-    result: From concept through five pilots
-    takeaway: We built a Slack-first agent to carry engineering commitments from conversation to action across the tools teams already used.
+    result: Took a Slack-based engineering agent from concept through five pilots
+    takeaway: GetLoopie.ai connected meetings, Slack threads, and issue trackers so engineering teams could follow up on commitments from Slack.
     summary: We took GetLoopie from concept through five pilots. It connected context from meetings, Slack, and issue trackers so teams could follow up where they already worked.
     url: /work/getloopie/
     markdown: /work/getloopie/markdown.txt

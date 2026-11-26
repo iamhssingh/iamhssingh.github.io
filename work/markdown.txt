@@ -2,7 +2,7 @@
 layout: plain-text
 ---
 {% assign portfolio = site.data.portfolio -%}
-# Work
+# Case Studies
 
 How I built AI products, rebuilt production systems, and helped teams ship.
 

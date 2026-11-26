@@ -1,0 +1,29 @@
+---
+title: Open source & recognitions
+description: Himanshu Shankar’s open-source contributions, professional recognition, conference speaking, and mentorship.
+markdown_url: /recognitions/markdown.txt
+---
+
+<header class="page-hero work-hero">
+  <h1>Open source &amp; recognitions</h1>
+</header>
+
+<div class="section work-archive">
+  <ul class="study-list archive-studies" role="list">
+    {% for entry in site.data.recognitions.entries %}
+    <li>
+      <article id="{{ entry.id }}">
+        <h2 class="recognition-title">{{ entry.title | escape }}</h2>
+        <p>{{ entry.description | escape }}</p>
+        {% if entry.links %}
+        <div class="recognition-links">
+          {% for link in entry.links %}
+          <a class="text-link" href="{{ link.url | escape }}">{{ link.label | escape }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -57,6 +57,20 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); }
 .section-title { margin-bottom: 1.35rem; font: 650 .86rem/1.4 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
 .home-hero { padding-block: clamp(2.5rem, 6vw, 4.25rem) clamp(2rem, 4.5vw, 3.4rem); }
 .hero-role { margin: .6rem 0 0; font-size: clamp(1.1rem, 2.2vw, 1.35rem); font-weight: 600; }
+.contact-button {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  margin-top: 1.2rem;
+  padding: .45rem .95rem;
+  border-radius: .25rem;
+  background: var(--accent);
+  color: var(--paper);
+  font-size: .94rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.contact-button:hover { background: var(--ink); color: var(--paper); }
 
 .quick-summary { margin-top: 1.2rem; max-width: 40rem; font-size: .94rem; }
 .quick-summary > summary {
@@ -84,11 +98,13 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); }
 .quick-summary-status { margin: 0; color: var(--muted); }
 .quick-summary textarea { width: 100%; margin-top: .4rem; font: inherit; }
 
-.featured-study { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: end; gap: 1.5rem 2.5rem; padding-bottom: 1.5rem; }
-.featured-study h3 { max-width: 25ch; font-size: clamp(1.9rem, 4.2vw, 3.25rem); }
-.featured-study > p { margin: 0; color: var(--muted); }
-.featured-study h3 a, .study-list h2 a, .study-list h3 a, .leadership h3 a { color: var(--ink); text-decoration-color: var(--line); }
-.featured-study h3 a:hover, .study-list h2 a:hover, .study-list h3 a:hover, .leadership h3 a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.recognition-highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem 2rem; margin: 0 0 1.1rem; padding: 0; list-style: none; }
+.recognition-highlights h3 { font-size: clamp(1.15rem, 2.3vw, 1.45rem); }
+.recognition-highlights p { margin: .35rem 0 0; color: var(--muted); }
+.recognition-title { margin-bottom: .5rem; font-size: clamp(1.45rem, 3vw, 2.15rem); }
+.recognition-links { display: flex; flex-wrap: wrap; gap: .2rem 1rem; margin-top: .45rem; }
+.recognition-highlights h3 a, .study-list h2 a, .study-list h3 a { color: var(--ink); text-decoration-color: var(--line); }
+.recognition-highlights h3 a:hover, .study-list h2 a:hover, .study-list h3 a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .study-list { margin: 0; padding: 0; list-style: none; }
 .study-list li { padding-block: 1.1rem; border-top: 1px solid var(--line); }
 .study-list p, .leadership p { margin: 0; color: var(--muted); }
@@ -117,6 +133,7 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); }
 .case-hero { padding-bottom: clamp(1.5rem, 4vw, 2.5rem); }
 .case-hero .text-link { display: inline-block; margin-bottom: 1.35rem; }
 .case-hero h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); }
+.case-overview h1 { font-size: clamp(2.25rem, 4.8vw, 3.25rem); }
 .case-takeaway { color: var(--ink); }
 .case-role { margin: .65rem 0 0; color: var(--muted); }
 .case-role strong { margin-right: .35rem; color: var(--ink); }
@@ -149,6 +166,9 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); }
 .case-validation dd { margin: 0; }
 .case-validation dd p { margin: .2rem 0 0; color: var(--muted); }
 .case-deep-dives ul { margin-bottom: 0; }
+.case-technical-details { margin-top: 1.5rem; border-block: 1px solid var(--line); }
+.case-technical-details > summary { padding-block: .9rem; color: var(--accent); font-weight: 650; cursor: pointer; }
+.case-technical-details[open] { padding-bottom: 1rem; }
 .study-list .archive-deep-dives { margin: .6rem 0 0; padding-left: 1.1rem; }
 .study-list .archive-deep-dives li { padding: .1rem 0; border: 0; }
 .case-body code { overflow-wrap: anywhere; }
@@ -180,8 +200,9 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); }
 .footer-links { display: flex; flex-wrap: wrap; gap: .4rem 1rem; font-size: .9rem; }
 
 @media (max-width: 620px) {
-  .featured-study, .home-studies li, .home-interests .home-studies li { grid-template-columns: 1fr; gap: .55rem; }
-  .featured-study { align-items: start; }
+  .home-studies li, .home-interests .home-studies li { grid-template-columns: 1fr; gap: .55rem; }
+  .recognition-highlights { grid-template-columns: 1fr; }
+  .site-nav { column-gap: .75rem; }
   .case-metrics div:first-child { padding-left: .95rem; }
 }
 @media (max-width: 420px) {

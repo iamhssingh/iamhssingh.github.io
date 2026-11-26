@@ -2,17 +2,24 @@
 layout: plain-text
 ---
 {% assign portfolio = site.data.portfolio -%}
-{% assign featured = portfolio.work | where: 'id', portfolio.home.featured | first -%}
 # Himanshu Shankar
 
 > {{ portfolio.role }}
 
 {{ portfolio.intro }}
 
-## Selected work
+## Open source and recognitions
 
-- [{{ featured.title }}]({{ featured.markdown | absolute_url }}). {{ featured.summary }}
-{% for study_id in portfolio.home.supporting -%}
+{% for entry in site.data.recognitions.entries -%}
+{% if entry.highlight -%}
+- [{{ entry.title }}]({{ '/recognitions/' | absolute_url }}#{{ entry.id }}). {{ entry.highlight }}.
+{% endif -%}
+{% endfor %}
+[All recognitions]({{ '/recognitions/markdown.txt' | absolute_url }})
+
+## Selected case studies
+
+{% for study_id in portfolio.home.case_studies -%}
 {% assign study = portfolio.work | where: 'id', study_id | first -%}
 - [{{ study.title }}]({{ study.markdown | absolute_url }}). {{ study.result }}.
 {% endfor %}

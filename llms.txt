@@ -10,13 +10,14 @@ The links below serve complete page content as plain-text Markdown, including te
 ## Portfolio in Markdown
 
 - [Portfolio profile]({{ '/profile.txt' | absolute_url }}): Role, selected work, and current interests.
-- [Work index]({{ '/work/markdown.txt' | absolute_url }}): Case studies by topic and the GetLoopie deep dives.
+- [Case studies]({{ '/work/markdown.txt' | absolute_url }}): Case studies by topic and the GetLoopie deep dives.
 {% for study in site.data.portfolio.work -%}
 - [{{ study.title }}]({{ study.markdown | absolute_url }}): {{ study.summary }}
 {% endfor %}
 ## Experience and projects
 
 - [Experience]({{ '/experience/markdown.txt' | absolute_url }}): Employment history and engineering leadership.
+- [Open source and recognitions]({{ '/recognitions/markdown.txt' | absolute_url }}): Open-source contributions, professional recognition, speaking, and mentorship.
 - [Consulting]({{ '/consulting/markdown.txt' | absolute_url }}): Client engagements.
 - [Projects]({{ '/projects/markdown.txt' | absolute_url }}): Offline warranty validation, earlier products, and open source.
 - [Résumé]({{ '/himanshushankar/main.pdf' | absolute_url }}): Résumé in PDF.

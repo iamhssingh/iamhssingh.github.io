@@ -4,7 +4,7 @@ layout: default
 {% assign study = site.data.portfolio.work | where: "id", page.study_id | first %}
 {% assign children = site.data.portfolio.work | where: 'parent', study.id %}
 {% assign study_file = study.id | prepend: 'case-studies/' | append: '.md' %}
-<header class="page-hero case-hero">
+<header class="page-hero case-hero{% if study.architecture_with_evals %} case-overview{% endif %}">
   {% if study.parent %}
   {% assign parent = site.data.portfolio.work | where: 'id', study.parent | first %}
   <a class="text-link" href="{{ parent.url | relative_url }}">{{ parent.title | escape }} overview</a>
@@ -29,7 +29,19 @@ layout: default
     {% endfor %}
   </dl>
   {% endif %}
+  {% if children.size > 0 %}
+  <section class="case-deep-dives" aria-labelledby="case-deep-dives-title">
+    <h2 id="case-deep-dives-title">Engineering deep dives</h2>
+    <ul>
+      {% for child in children %}
+      <li><a href="{{ child.url | relative_url }}">{{ child.title | remove_first: study.title | remove_first: ' · ' | escape }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
   {% if study.architecture_with_evals %}
+  <details class="case-technical-details">
+    <summary>Product, architecture, and evaluation details</summary>
   {% capture product %}{% include getloopie-product.md %}{% endcapture %}
   {{ product | markdownify }}
   {% include getloopie-architecture.html %}
@@ -40,15 +52,8 @@ layout: default
   {% if study.validation %}
   {% include case-validation.html study=study %}
   {% endif %}
-  {% if children.size > 0 %}
-  <section class="case-deep-dives" aria-labelledby="case-deep-dives-title">
-    <h2 id="case-deep-dives-title">GetLoopie engineering deep dives</h2>
-    <ul>
-      {% for child in children %}
-      <li><a href="{{ child.url | relative_url }}">{{ child.title | escape }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
+  {% if study.architecture_with_evals %}
+  </details>
   {% endif %}
   {% if study.pdf_reference %}
   {% include pdf-reference.html reference=study.pdf_reference %}

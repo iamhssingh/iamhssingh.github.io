@@ -1,0 +1,30 @@
+entries:
+  - id: drf-user
+    title: drf-user
+    highlight: One of JetBrains’ PyCharm Projects of the Decade
+    description: I started drf-user at 101Loop and contributed to its development. The open-source Django REST Framework package extends Django’s user model with additional fields and authentication APIs. It was one of ten winners of JetBrains’ 2020 PyCharm Project of the Decade competition.
+    links:
+      - label: drf-user on GitHub
+        url: https://github.com/101Loop/drf-user
+      - label: PyCharm award announcement
+        url: https://www.jetbrains.com/lp/pycharm-10-years/
+  - id: django-software-foundation
+    title: Django Software Foundation
+    highlight: Individual Member, recognized for contributions to Django’s mission
+    description: The Django Software Foundation appointed me as an Individual Member in recognition of my contributions to its mission.
+    links:
+      - label: DSF Individual Members
+        url: https://www.djangoproject.com/foundation/individual-members/
+  - id: ieee
+    title: IEEE Senior Member
+    highlight: Elevated to Senior Member in 2025
+    description: I became an IEEE Senior Member in 2025. I’m also a member of the Python Software Foundation, ACM, and the Institution of Engineers (India).
+  - id: speaking
+    title: Conference speaking
+    description: I spoke about immutable audit trails in Django at DjangoDay India 2025. At PyCon India and PyDelhi, I’ve shared work on packaging Django REST applications and contributing to drf-user. I also mentored four speakers from Certa for PyCon India 2023.
+  - id: 101loop
+    title: 101Loop and Smart India Hackathon
+    description: I founded and led 101Loop from 2018 to 2021 to offer free remote training and mentorship to computer science students across India. I mentored a winning team at Smart India Hackathon 2018 and a grand-finalist team in 2020.
+    links:
+      - label: 101Loop on GitHub
+        url: https://github.com/101Loop

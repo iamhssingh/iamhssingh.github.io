@@ -1,0 +1,14 @@
+---
+layout: plain-text
+---
+# Open source and recognitions
+
+{% for entry in site.data.recognitions.entries -%}
+## {{ entry.title }}
+
+{{ entry.description }}
+{% for link in entry.links %}
+- [{{ link.label }}]({{ link.url }})
+{%- endfor %}
+
+{% endfor -%}
