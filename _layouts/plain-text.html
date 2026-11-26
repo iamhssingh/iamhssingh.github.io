@@ -1,0 +1,6 @@
+---
+---
+{%- comment -%}
+Keep Markdown legible even when the static host omits a charset for text files.
+{%- endcomment -%}
+{{- content | replace: "’", "'" | replace: "–", "-" | replace: "—", "-" | replace: "·", "|" | replace: "Résumé", "Resume" | replace: "→", "to" | replace: "Já", "Ja" -}}

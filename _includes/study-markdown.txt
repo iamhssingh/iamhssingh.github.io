@@ -1,0 +1,85 @@
+{% assign study = site.data.portfolio.work | where: "id", page.study_id | first -%}
+{% assign study_file = study.id | prepend: 'case-studies/' | append: '.md' -%}
+# {{ study.title }}
+
+> {{ study.takeaway }}
+
+**My role** — {{ study.role }}
+
+[Portfolio case study]({{ study.url | absolute_url }})
+
+{% if study.metrics -%}
+## Project metrics
+
+{% for metric in study.metrics -%}
+- **{{ metric.label }}:** {{ metric.value }}
+{% endfor -%}
+{% endif %}
+{% if study.architecture_with_evals -%}
+{% include getloopie-product.md %}
+
+{% include getloopie-architecture.txt %}
+{% elsif study.design -%}
+## {{ study.design.title | default: 'Approach and high-level design' }}
+
+{{ study.design.approach }}
+
+{% assign phases = 'before,after' | split: ',' -%}
+{% for phase in phases -%}
+{% assign caption_key = phase | append: '_caption' -%}
+### {{ phase | capitalize }}: {{ study.design[caption_key] }}
+
+```mermaid
+flowchart TD
+{% for stage in study.design[phase] -%}
+  s{{ forloop.index }}["{{ stage }}"]
+{% endfor -%}
+{% for stage in study.design[phase] offset:1 -%}
+  s{{ forloop.index }} --> s{{ forloop.index | plus: 1 }}
+{% endfor -%}
+```
+
+{% endfor -%}
+{% endif -%}
+{% include {{ study_file }} -%}
+
+{% if study.validation -%}
+## {{ study.validation_title | default: 'How I verified the result' }}
+
+{% for entry in study.validation -%}
+- **{{ entry.stage }}.** {{ entry.question }} {{ entry.check }}
+{% endfor %}
+{% endif -%}
+{% assign children = site.data.portfolio.work | where: 'parent', study.id -%}
+{% if children.size > 0 -%}
+## GetLoopie engineering deep dives
+
+{% for child in children -%}
+- [{{ child.title }}]({{ child.markdown | absolute_url }})
+{% endfor %}
+{% endif -%}
+{% if study.parent -%}
+{% assign parent = site.data.portfolio.work | where: 'id', study.parent | first -%}
+[{{ parent.title }} overview]({{ parent.markdown | absolute_url }})
+{% endif -%}
+
+{% if study.pdf_reference -%}
+{% assign reference = study.pdf_reference -%}
+## PDF ingestion: a 2024 reference design
+
+{% include pdf-reference-notes.md %}
+```mermaid
+flowchart TD
+  page["{{ reference.decision }}"]
+{% for route in reference.routes -%}
+  page --> route{{ forloop.index }}["{{ route.kind }}: {{ route.method }}"]
+  route{{ forloop.index }} --> output1
+{% endfor -%}
+{% for output in reference.outputs -%}
+  output{{ forloop.index }}["{{ output }}"]
+{% unless forloop.last -%}
+  output{{ forloop.index }} --> output{{ forloop.index | plus: 1 }}
+{% endunless -%}
+{% endfor -%}
+```
+{% endif -%}

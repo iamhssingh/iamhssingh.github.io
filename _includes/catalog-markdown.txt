@@ -1,0 +1,19 @@
+{% assign catalog = site.data[page.catalog_id] -%}
+# {{ catalog.title }}
+
+{{ catalog.intro }}
+
+{% for entry in catalog.entries -%}
+## {{ entry.title }}
+
+{{ entry.meta }}
+
+{% for paragraph in entry.paragraphs -%}
+{{ paragraph.text }}
+
+{% endfor -%}
+{% for point in entry.points -%}
+- {{ point.text }}
+{% endfor %}
+
+{% endfor -%}

@@ -1,0 +1,33 @@
+<section class="case-design loopie-architecture" aria-labelledby="loopie-architecture-title" id="architecture">
+  <h2 id="loopie-architecture-title">Architecture and evaluation checkpoints</h2>
+  <p>The demo workspace gave us two inputs. Captured events replayed through ingestion, and golden questions exercised the query path under different users and thread contexts. The checkpoints show what we reviewed offline.</p>
+  <figure class="loopie-diagram">
+    <div class="loopie-diagram-scroll" tabindex="0" role="region" aria-label="Scrollable GetLoopie architecture diagram">
+      <img src="{{ '/assets/diagrams/getloopie-architecture.svg' | relative_url }}" alt="GetLoopie architecture with golden dataset inputs and offline evaluation checkpoints. The detailed walkthrough follows.">
+    </div>
+    <figcaption>
+      <span>Solid arrows show system flow. Dashed arrows show offline replay and evals.</span>
+      <a href="{{ '/assets/diagrams/getloopie-architecture.svg' | relative_url }}">Open full-size diagram</a>
+    </figcaption>
+  </figure>
+  <details class="diagram-walkthrough">
+    <summary>Architecture and failure details</summary>
+    {% for lane in site.data.getloopie_architecture.lanes %}
+    <h3>{{ lane.title | escape }}</h3>
+    <p><strong>Golden dataset input.</strong> {{ lane.input | escape }}</p>
+    <ol>
+      {% for step in lane.steps %}
+      <li>
+        <strong>{{ step.title | escape }}.</strong> {{ step.detail | escape }}
+        {% if step.checkpoint %}
+        <p><strong>{{ step.checkpoint | escape }}.</strong> {{ step.failure | escape }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    {% if lane.id == 'build' %}
+    <p>The graph and vector index feed the retrieval tools below.</p>
+    {% endif %}
+    {% endfor %}
+  </details>
+</section>

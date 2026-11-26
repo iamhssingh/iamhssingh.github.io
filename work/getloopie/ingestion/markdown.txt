@@ -1,0 +1,5 @@
+---
+layout: plain-text
+study_id: getloopie-ingestion
+---
+{% include study-markdown.txt -%}

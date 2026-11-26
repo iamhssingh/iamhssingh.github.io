@@ -1,0 +1,54 @@
+title: "Engineering experience"
+intro: "I stayed hands-on as my scope grew, from backend systems to leading a remote engineering team and taking an AI product through five pilots."
+prompt: "Open an entry for the complete context."
+entries:
+  - title: "GetLoopie.ai"
+    meta: "Co-Founder · Bengaluru, India · Feb 2025 - Mar 2026"
+    paragraphs:
+      - text: "Co-founded GetLoopie and led product engineering, backend, integrations, deployment, and validation through five pilots."
+        callout: true
+    points:
+      - text: "Built workflow execution across Slack, Jira, Linear, Jira Service Management, Teams, and Fathom."
+      - text: "Built code-controlled orchestration and a Work Graph ingestion pipeline for context assembly and real-time commitment tracking."
+      - text: "Scoped retrieval permissions across direct messages and private channels using Qdrant filtering, semantic search, and LLM reranking."
+      - text: "Used spec-driven development with Claude Code and Codex to turn product requirements into reviewed implementation plans."
+      - text: "[Read how I evaluated the GetLoopie.ai agent platform](../work/getloopie/)."
+      - text: "Built with FastAPI, PostgreSQL, MongoDB, Redis, Qdrant, Celery, APScheduler, OpenAI Agents SDK, and Hetzner."
+  - title: "Opinr Inc. d.b.a. [Certa](https://www.getcerta.com/)"
+    meta: "Founding Backend Engineer → Director of Engineering · Remote · Jun 2019 - Feb 2025"
+    id: certa
+    open: true
+    paragraphs:
+      - text: "Went from founding backend engineer to Director of Engineering at a Series B company. I helped grow the remote team from 5 to 50 while continuing to design and ship platform services."
+        callout: true
+    points:
+      - text: "Scaled the engineering organization **from 5 → 50** using a Spotify-inspired team structure, a consistent hiring bar, career ladders, and asynchronous working practices."
+        id: certa-team
+      - text: "Led Backend and DevOps. The platform ran at **P99 < 100 ms** against a **200 ms SLA**, with **90%+ automated test coverage**."
+      - text: "**Reduced sprint spillovers ~40%** and **improved on-time delivery ~20–30 percentage points** by making commitments explicit, automating follow-ups, and tightening release gates."
+      - text: "**Cut cycle time ~30%** and **saved ~1–2 hours per IC per week** in status meetings by moving status updates and follow-ups to asynchronous threads."
+      - text: "**Built and scaled QA** through coverage gates, risk-based testing, and release checklists, reducing escaped defects by **~35%**."
+      - text: "Mentored and managed Scrum Masters and standardized planning rituals and delivery metrics."
+      - text: "[How I grew a remote engineering team from 5 to 50](../work/scaling-a-remote-team/)."
+      - text: "Led engineering discussions with Fortune 500 customers and co-designed features with them on calls."
+        id: certa-clients
+      - text: "Built [Data AI @ Certa](../work/certa-data-ai/) in 2024. It prefilled vendor RFP responses with source citations and cut submission turnaround from 1–3 months to under two weeks."
+      - text: "Built products used by teams at **Bain and McKinsey**, translating enterprise requirements into configurable compliance workflows."
+      - text: "Served international compliance use cases across **third-party risk management, supply-chain risk management, and vendor compliance**, including AML and anti-bribery/anti-corruption controls, evidence collection, adjudication, and auditability."
+      - text: "Shipped major **No-Code Workflow Engine** capabilities including Adjudication, Integration Polling, and SSO across enterprise deployments."
+      - text: "Designed a [serverless integration microservice](../work/certa-integrations/) for plug-in connectors. Delivered NetSuite, Dun & Bradstreet, and RDC integrations and cut lead times from weeks to days."
+      - text: "Built a [serverless Audit Log microservice](../work/certa-audit-logging/) that handled nearly 10,000 events per second during migration and passed SOC audits, third-party penetration tests, and client load tests."
+        id: certa-platform
+      - text: "Started an internal open-source initiative that included contributions to DRF-User."
+  - title: "[Vitartha LLP](https://vitartha.com)"
+    meta: "Founder · May 2017 - Jun 2019"
+    points:
+      - text: "Founded Vitartha LLP, focusing on personal finance and expense-management solutions."
+      - text: "Developed and launched Hisab Kitab, a micro-app for personal finance management."
+      - text: "Reached more than 5,000 Android Play Store downloads within the first three months."
+      - text: "Grew to more than 500 active users organically during the same period."
+  - title: "Civil Machines Technologies Private Limited · Earlier experience"
+    meta: "Technology Lead · Noida, India · Oct 2014 - Dec 2018"
+    points:
+      - text: "Led development of enterprise products for Indian businesses, including the 101Lease asset-management platform."
+      - text: "Contributed at a co-founder/founding-engineer level to the 101Lease asset-management product through a highly modular architecture that could be customized for different businesses."

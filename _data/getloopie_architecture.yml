@@ -1,0 +1,50 @@
+lanes:
+  - id: build
+    title: Ingestion and Work Graph
+    input: Captured Slack events from the synthetic workspace were replayed from MongoDB through the same ingestion pipeline after changes.
+    steps:
+      - id: events
+        title: Source events into MongoDB
+        diagram: "Source events\nMongoDB raw history"
+        detail: Store raw messages and events. An async task uses the thread ID to assemble the conversation.
+      - id: gate
+        title: Decision-model gate
+        diagram: "Decision-model gate\nSystem 1: ModernBERT"
+        detail: Gate downstream ingestion routing. Mahen fine-tuned ModernBERT for System 1, the first AI layer.
+      - id: summary
+        title: LLM thread summary
+        diagram: "LLM thread summary\n5W1H and linked issues"
+        detail: Summarize the thread in a 5W1H structure, including participants and linked issues.
+      - id: evidence
+        title: MongoDB graph and Qdrant index
+        diagram: "MongoDB Work Graph\nQdrant summary index"
+        detail: Build the Work Graph at ingestion. Keep ticket links in MongoDB and embed only the thread summary in Qdrant with participant, visibility, topic, project, and group metadata.
+        checkpoint: Graph review
+        diagram_failure: "Missing or wrong\nconversation-to-ticket link"
+        failure: Missing or incorrect links between a conversation and its ticket, including links across channels.
+  - id: query
+    title: Query, orchestration, and response
+    live_input: Slack request
+    input: Golden questions replayed with a user and thread context from the demo workspace. Expected linked threads and scenario outcomes gave us a reference for review.
+    steps:
+      - id: router
+        title: Code-controlled routing
+        diagram: "Code-controlled orchestration\nScrum Master or Product Manager"
+        detail: The orchestrator selects a Scrum Master or Product Manager sub-agent in application code.
+        checkpoint: Routing and tool choice
+        diagram_failure: "Wrong view, tool,\nor destination thread"
+        failure: An incident goes to the wrong view or thread, or a sub-agent selects the wrong tool.
+      - id: retrieval
+        title: Permission-scoped SDK tools
+        diagram: "Permission-scoped SDK tools\nSearch, rerank, graph traversal"
+        detail: Application code scopes each tool call. Qdrant filters run before top-k search and LLM reranking. The graph tool loads linked tickets under the same access rules.
+        checkpoint: Retrieval and access
+        diagram_failure: "Missing or irrelevant evidence,\nor a private-context leak"
+        failure: The agent misses an expected thread, pulls in irrelevant context, or carries a private detail into a public response.
+      - id: answer
+        title: Response assembly and Slack delivery
+        diagram: "Assemble and validate response\nPost to Slack"
+        detail: The orchestrator compiles the answer and posts it to Slack. Pydantic checks the response structure.
+        checkpoint: Groundedness
+        diagram_failure: "Unsupported claim in a\nschema-valid response"
+        failure: A response passes the schema check but makes a claim the available evidence does not support.

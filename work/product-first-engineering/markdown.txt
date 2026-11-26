@@ -1,0 +1,5 @@
+---
+layout: plain-text
+study_id: product-first-engineering
+---
+{% include study-markdown.txt -%}

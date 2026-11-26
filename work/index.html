@@ -1,0 +1,44 @@
+---
+title: Work
+description: Case studies in applied AI, software delivery, and production architecture by Himanshu Shankar.
+permalink: /work/
+markdown_url: /work/markdown.txt
+---
+
+{% assign portfolio = site.data.portfolio %}
+<header class="page-hero work-hero">
+  <h1>Work</h1>
+  <p class="page-intro">How I built AI products, rebuilt production systems, and helped teams ship.</p>
+</header>
+
+<div class="section work-archive">
+  {% for group in portfolio.work_groups %}
+  {% assign studies = portfolio.work | where: 'group', group.id %}
+  <section class="work-group" aria-labelledby="work-{{ group.id }}">
+    <h2 class="section-title" id="work-{{ group.id }}">{{ group.title | escape }}</h2>
+    <ul class="study-list archive-studies" role="list">
+      {% for study in studies %}
+      <li>
+        <article>
+          <h3><a href="{{ study.url | relative_url }}">{{ study.title | escape }}</a></h3>
+          <p class="study-outcome">{{ study.result | escape }}</p>
+          <p>{{ study.takeaway | escape }}</p>
+          {% assign children = portfolio.work | where: 'parent', study.id %}
+          {% if children.size > 0 %}
+          <ul class="archive-deep-dives" aria-label="{{ study.title | escape }} engineering deep dives">
+            {% for child in children %}
+            <li><a href="{{ child.url | relative_url }}">{{ child.title | remove_first: study.title | remove_first: ' · ' | escape }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  <nav class="related-links" aria-label="More work">
+    <a href="{{ '/consulting/' | relative_url }}">Consulting engagements</a>
+    <a href="{{ '/projects/' | relative_url }}">Earlier projects and open source</a>
+  </nav>
+</div>

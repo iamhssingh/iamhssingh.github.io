@@ -1,0 +1,20 @@
+<section class="pdf-reference" id="pdf-reference" aria-labelledby="pdf-reference-title">
+  <h2 id="pdf-reference-title">PDF ingestion: a 2024 reference design</h2>
+  {% capture notes %}{% include pdf-reference-notes.md %}{% endcapture %}
+  {{ notes | markdownify }}
+  <figure class="reference-figure" aria-label="Reference diagram for routing and citing PDF evidence">
+    <ol class="reference-flow" role="list">
+      <li>{{ include.reference.decision | escape }}</li>
+      <li class="reference-routes">
+        <ul role="list" aria-label="Alternative extraction routes">
+          {% for route in include.reference.routes %}
+          <li><strong>{{ route.kind | escape }}</strong><span>{{ route.method | escape }}</span></li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% for output in include.reference.outputs %}
+      <li>{{ output | escape }}</li>
+      {% endfor %}
+    </ol>
+  </figure>
+</section>

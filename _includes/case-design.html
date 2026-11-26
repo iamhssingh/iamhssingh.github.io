@@ -1,0 +1,23 @@
+{% assign design = include.study.design %}
+{% assign diagram = include.study.id | prepend: '/assets/diagrams/case-' | append: '.svg' | relative_url %}
+{% assign phases = 'before,after' | split: ',' %}
+<section class="case-design" aria-labelledby="case-design-title">
+  <h2 id="case-design-title">{{ design.title | default: 'Approach and high-level design' | escape }}</h2>
+  <p>{{ design.approach | escape }}</p>
+  <figure class="case-flowchart">
+    <img src="{{ diagram }}" alt="Before-and-after flowchart for {{ include.study.title | escape }}. Text walkthrough follows.">
+    <figcaption><a href="{{ diagram }}">Open full-size diagram</a></figcaption>
+  </figure>
+  <details class="diagram-walkthrough">
+    <summary>Text version of the diagram</summary>
+    {% for phase in phases %}
+    {% assign caption_key = phase | append: '_caption' %}
+    <h3>{{ phase | capitalize }}: {{ design[caption_key] | escape }}</h3>
+    <ol>
+      {% for stage in design[phase] %}
+      <li>{{ stage | escape }}</li>
+      {% endfor %}
+    </ol>
+    {% endfor %}
+  </details>
+</section>

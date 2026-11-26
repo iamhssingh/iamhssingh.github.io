@@ -1,0 +1,37 @@
+## Architecture and evaluation checkpoints
+
+Captured events from the synthetic workspace fed offline ingestion replay. Golden questions exercised the query path with a user and thread context.
+
+```mermaid
+flowchart TD
+{% for lane in site.data.getloopie_architecture.lanes -%}
+  subgraph {{ lane.id }}["{{ lane.title }}"]
+    {{ lane.id }}_gold["Golden dataset: {{ lane.input }}"]
+    {{ lane.id }}_gold -.-> {{ lane.steps.first.id }}
+{% if lane.live_input -%}
+    {{ lane.id }}_live["{{ lane.live_input }}"] --> {{ lane.steps.first.id }}
+{% endif -%}
+{% assign previous = '' -%}
+{% for step in lane.steps -%}
+    {{ step.id }}["{{ step.title }}"]
+{% if previous != '' -%}
+    {{ previous }} --> {{ step.id }}
+{% endif -%}
+{% if step.checkpoint -%}
+    {{ step.id }} -.-> {{ step.id }}_eval["{{ step.checkpoint }}: {{ step.failure }}"]
+{% endif -%}
+{% assign previous = step.id -%}
+{% endfor -%}
+  end
+{% endfor -%}
+  evidence --> retrieval
+```
+
+{% for lane in site.data.getloopie_architecture.lanes -%}
+### {{ lane.title }}
+
+{% for step in lane.steps -%}
+- **{{ step.title }}.** {{ step.detail }}{% if step.checkpoint %} **{{ step.checkpoint }}.** {{ step.failure }}{% endif %}
+{% endfor %}
+
+{% endfor -%}

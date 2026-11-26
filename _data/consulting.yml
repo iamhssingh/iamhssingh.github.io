@@ -1,0 +1,59 @@
+title: "Engineering consulting"
+intro: "I worked directly with client teams to turn operational problems into software they could run, from retail inventory to regulated financial reporting."
+prompt: "Open an engagement for the complete context."
+entries:
+  - title: "[Deckers Brands](https://www.deckers.com/)"
+    meta: "Engineering Lead · Consultant via Toptal"
+    open: true
+    paragraphs:
+      - text: "Led a cross-functional team from MVP to a production Allocation & Replenishment platform in approximately two months, then supported adoption across North America, EMEA, Japan, and China."
+        callout: true
+    points:
+      - text: "Led three developers, one product manager, and two QA engineers. Co-owned the roadmap with Planning and Supply Chain."
+      - text: "Replaced manual Python workflows with a shared allocation and replenishment platform that recorded the decisions planners made."
+      - text: "Set a release cadence, assigned owners, and established code-review and release gates. Maintained **90%+ unit test coverage** with Pytest."
+      - text: "Deployed Lambda, API Gateway, EventBridge, S3, and RDS with **CloudFormation**. The infrastructure passed audit with least-privilege access and resource tagging."
+      - text: "Processed Excel SKU datasets with NumPy and Pandas in a shared intake pipeline."
+      - text: "Integrated with legacy **Oracle RMS** via SOAP using fault-tolerant adapters that handled schema drift and latency."
+      - text: "Used a **multi-tenant** platform for North America, EMEA, Japan, and China."
+      - text: "Added structured logs, dashboards, and runbooks for operators."
+      - text: "[Read the allocation and replenishment case study](../work/deckers-allocation/)."
+  - title: "[Boston Consulting Group · BCG Gamma](https://www.bcg.com/beyond-consulting/bcg-gamma/default)"
+    meta: "Senior Software Engineer · Consultant via Toptal"
+    paragraphs:
+      - text: "Consulted with BCG Gamma on an oil-price prediction platform for a global oil producer, owning the backend and translating model-driven requirements into a production system."
+        callout: true
+    points:
+      - text: "Built the backend, optimized ORM queries, and met REST API service-level targets."
+      - text: "Discussed technical feasibility and production-system design with the client team."
+      - text: "Designed the system architecture and development timelines for the entire application."
+  - title: "[LedgerX LLC](https://www.ledgerx.com/)"
+    meta: "Senior Software Engineer · Consultant"
+    paragraphs:
+      - text: "Built reporting and clearing systems inside a CFTC-regulated derivatives exchange and clearing organization, where traceability, assertion accuracy, and transaction integrity were product requirements."
+        callout: true
+    points:
+      - text: "Automated CFTC reporting for crypto trading and clearing."
+      - text: "Developed a clearinghouse product for cryptocurrencies, ensuring proper transaction trails."
+      - text: "Built checks for assertions that depended on data from other CFTC reports."
+      - text: "Optimized Django REST Framework APIs and Django ORM queries for reporting and clearing."
+      - text: "Integrated the product with financial APIs including Plaid and Modern Treasury."
+  - title: "[Carta Healthcare Inc.](https://www.cartahealthcare.com/)"
+    meta: "Senior Software Engineer · Consultant"
+    points:
+      - text: "Implemented an interface for third-party certification-system integration with a FHIR-based data repository."
+      - text: "Optimized Flask-based APIs to achieve P99 < 100 ms."
+      - text: "Achieved NCDR’s CathPCI certification using the Certification Interface."
+      - text: "Raised automated test coverage by approximately 23 percentage points to over 85%."
+  - title: "[Já, Iceland · Ja.is](https://ja.is/)"
+    meta: "FullStack Software Engineer · Consultant"
+    points:
+      - text: "Developed a product integrated with the Confirmit platform for a survey module."
+      - text: "Optimized PostgreSQL queries from Django ORM in admin and template-based views."
+      - text: "Increased survey-module branch coverage from 0% to 93%."
+  - title: "Orsy Inc."
+    meta: "Senior Software Engineer · Consultant via Toptal"
+    points:
+      - text: "Developed a social-media streaming platform for live news and event telecasts backed by cryptocurrency."
+      - text: "Maintained 95%+ branch coverage using a test-driven development approach."
+      - text: "Integrated the product with Agora for video streaming."

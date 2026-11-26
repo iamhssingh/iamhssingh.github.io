@@ -1,0 +1,5 @@
+---
+layout: plain-text
+study_id: getloopie-work-graph
+---
+{% include study-markdown.txt -%}

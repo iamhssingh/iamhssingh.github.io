@@ -1,0 +1,5 @@
+---
+layout: plain-text
+catalog_id: projects
+---
+{% include catalog-markdown.txt -%}

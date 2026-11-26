@@ -1,0 +1,27 @@
+---
+layout: plain-text
+---
+{% assign portfolio = site.data.portfolio -%}
+# Work
+
+How I built AI products, rebuilt production systems, and helped teams ship.
+
+{% for group in portfolio.work_groups -%}
+## {{ group.title }}
+{% assign studies = portfolio.work | where: 'group', group.id -%}
+{% for study in studies %}
+### [{{ study.title }}]({{ study.markdown | absolute_url }})
+
+**{{ study.result }}**. {{ study.takeaway }}
+{% assign children = portfolio.work | where: 'parent', study.id -%}
+{% if children.size > 0 %}
+{% for child in children -%}
+- [{{ child.title | remove_first: study.title | remove_first: ' · ' }}]({{ child.markdown | absolute_url }})
+{% endfor -%}
+{% endif -%}
+{% endfor %}
+{% endfor -%}
+## More work
+
+- [Consulting engagements]({{ '/consulting/markdown.txt' | absolute_url }})
+- [Earlier projects and open source]({{ '/projects/markdown.txt' | absolute_url }})

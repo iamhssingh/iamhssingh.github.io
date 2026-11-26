@@ -1,0 +1,5 @@
+---
+layout: plain-text
+study_id: ai-in-engineering
+---
+{% include study-markdown.txt -%}

@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% assign catalog = site.data[page.catalog_id] %}
+{% assign prompt_id = page.catalog_id | append: '-list-title' %}
+{% assign entries_id = page.catalog_id | append: '-entries' %}
+<header class="page-hero">
+  <h1>{{ catalog.title | escape }}</h1>
+  <p class="page-intro">{{ catalog.intro | escape }}</p>
+</header>
+
+<section class="page-section" aria-labelledby="{{ prompt_id }}">
+  <div class="page-toolbar">
+    <p id="{{ prompt_id }}">{{ catalog.prompt | escape }}</p>
+    <button class="details-toggle" type="button" data-details-toggle="#{{ entries_id }}" aria-pressed="false">Expand all</button>
+  </div>
+  <div class="entry-list" id="{{ entries_id }}">
+    {% for entry in catalog.entries %}
+    <details class="entry-card"{% if entry.id %} id="{{ entry.id | escape }}"{% endif %}{% if entry.open %} open{% endif %}>
+      <summary>
+        <span>
+          <span class="entry-title">{{ entry.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+          <span class="entry-meta">{{ entry.meta | escape }}</span>
+        </span>
+      </summary>
+      <div class="entry-body">
+        {% for paragraph in entry.paragraphs %}
+        <p{% if paragraph.callout %} class="entry-callout"{% endif %}>{{ paragraph.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+        {% endfor %}
+        {% if entry.points %}
+        <ul>
+          {% for point in entry.points %}
+          <li{% if point.id %} id="{{ point.id | escape }}"{% endif %}>{{ point.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+</section>

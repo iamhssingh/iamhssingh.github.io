@@ -1,0 +1,14 @@
+<section class="case-validation" aria-labelledby="case-validation-title">
+  <h2 id="case-validation-title">{{ include.study.validation_title | default: 'How I verified the result' | escape }}</h2>
+  <dl>
+    {% for entry in include.study.validation %}
+    <div>
+      <dt>{{ entry.stage | escape }}</dt>
+      <dd>
+        <strong>{{ entry.question | escape }}</strong>
+        <p>{{ entry.check | escape }}</p>
+      </dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>

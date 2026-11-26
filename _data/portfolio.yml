@@ -1,0 +1,463 @@
+role: Hands-on engineering leader in applied AI
+intro: I led product engineering at GetLoopie.ai, the agent startup I co-founded. At Certa, I went from founding backend engineer to Director of Engineering and helped grow the remote team from 5 to 50 through Series B.
+fit: I work best with teams that need someone to own the architecture, stay close to the code, and work directly with customers as the product grows.
+
+home:
+  featured: getloopie
+  supporting:
+    - certa-data-ai
+    - certa-audit-logging
+  leadership:
+    - ai-in-engineering
+    - review-conventions
+    - product-first-engineering
+    - scaling-a-remote-team
+  leadership_intro: I lean toward servant leadership. I try to remove friction, make decisions visible, and give teams room to own the work.
+
+interests:
+  intro: I’m open to hands-on applied AI, platform engineering, and engineering leadership. These are three questions I’d especially like to work on or discuss.
+  topics:
+    - title: Enterprise edge AI
+      question: What can a field technician do when the phone loses signal? I’m interested in using the camera to identify parts and find the right service instructions locally.
+    - title: AI at scale
+      question: How do we take a useful pilot into production and keep its quality, permissions, latency, and cost under control as usage grows?
+    - title: AI in business processes
+      question: Which manual step would we remove first? I’d compare the time to complete the workflow and how often a person has to correct the result.
+
+work_groups:
+  - id: applied-ai
+    title: Applied AI products
+  - id: platforms
+    title: Platform engineering
+  - id: leadership
+    title: Engineering leadership
+
+work:
+  - id: getloopie
+    group: applied-ai
+    title: GetLoopie.ai
+    feature_title: An agent that follows engineering work across tools
+    role: Co-founder focused on product engineering, backend, integrations, deployment, and validation
+    category: Agent systems and evaluation
+    result: From concept through five pilots
+    takeaway: We built a Slack-first agent to carry engineering commitments from conversation to action across the tools teams already used.
+    summary: We took GetLoopie from concept through five pilots. It connected context from meetings, Slack, and issue trackers so teams could follow up where they already worked.
+    url: /work/getloopie/
+    markdown: /work/getloopie/markdown.txt
+    architecture_with_evals: true
+    validation_title: Where we ran evals
+    validation:
+      - stage: After retrieval
+        question: Did we find the right evidence?
+        check: Compare linked threads with expected evidence in a multi-user Slack workspace. Measure precision, recall, and F1.
+      - stage: At tool selection
+        question: Did the agent choose the right tool consistently?
+        check: Compare selected and expected tools. Track precision, recall, F1, pass@k, and pass^k across repeated trials.
+      - stage: At answer generation
+        question: Do the claims follow from the retrieved evidence?
+        check: Grade groundedness offline with an LLM rubric. We also tried two-pass judging.
+    metrics:
+      - value: Five
+        label: Product pilots
+      - value: Six
+        label: Integrated work tools
+      - value: 100+
+        label: Threads in the synthetic Slack workspace
+  - id: certa-data-ai
+    group: applied-ai
+    title: Data AI @ Certa
+    role: Built the product and designed source attribution with an ML engineer
+    category: Applied AI product
+    result: Vendor RFP submissions went from 1–3 months to under two weeks
+    takeaway: Turn vendor form entry into evidence review. Prefill each answer with a source the vendor can check.
+    summary: I built an AI product that prefilled vendor RFP responses from existing documents and public sources, with a citation for each answer.
+    url: /work/certa-data-ai/
+    markdown: /work/certa-data-ai/markdown.txt
+    design:
+      approach: I made each draft answer traceable to its source and put both in the existing RFP form so vendors could verify the evidence before submitting.
+      before_caption: Manual RFP responses
+      before:
+        - Vendor opens the RFP
+        - Searches existing documents and public sources
+        - Enters answers manually
+      after_caption: Source-cited prefill
+      after:
+        - Ingest vendor PDFs, decks, and public sources
+        - Extract candidate answers from source evidence
+        - Map answers and citations to RFP fields
+        - Vendor verifies and submits
+    pdf_reference:
+      decision: Route each PDF page by its text layer and layout
+      routes:
+        - kind: Clean text layer
+          method: Extract text and positions with PyMuPDF
+        - kind: Scanned page
+          method: Run OCR on the affected page
+        - kind: Complex tables or slides
+          method: Use layout and table extraction, such as Docling or Textract
+      outputs:
+        - Normalize results into evidence blocks with document, page, and region
+        - Retrieve evidence per RFP field and generate a draft with source IDs
+        - Resolve source IDs to citations and leave unsupported fields blank
+    validation:
+      - stage: Source review
+        question: Can a vendor verify a prefilled answer?
+        check: Show the evidence next to the answer in the RFP so the vendor can check it before submitting.
+      - stage: Product outcome
+        question: Did reusing evidence shorten submissions?
+        check: Vendor submission turnaround went from one to three months to under two weeks.
+    metrics:
+      - value: 1–3 months
+        label: Vendor submission turnaround before the project
+      - value: Under two weeks
+        label: Turnaround with prefilled responses
+      - value: '2024'
+        label: Year built
+  - id: ai-in-engineering
+    group: leadership
+    title: What I put in the spec when AI writes the code
+    role: Introduced spec-driven development and tested agent-assisted review workflows
+    category: Engineering practice
+    result: Spec-driven development with 50+ engineers
+    takeaway: Agree on what the user should see and which architectural boundaries matter. Let implementation change as the team gets feedback.
+    summary: I introduced spec-driven development at team scale and experimented with specialist agents, behavior-first PR review, and design verification.
+    url: /work/ai-in-engineering/
+    markdown: /work/ai-in-engineering/markdown.txt
+    design:
+      approach: I agree on product behavior and high-level design, then use a small implementation and behavior-first review to get feedback while the design is still easy to change.
+      before_caption: When the spec becomes a handoff
+      before:
+        - Freeze requirements and low-level design
+        - Pass the plan from product to engineering
+        - Discover the gaps during implementation or review
+        - Reopen the spec and rework the change
+      after_caption: How I keep feedback early
+      after:
+        - Agree on user behavior and high-level design
+        - Implement a small slice and adapt local design
+        - Review behavior and compare the PR with the agreed architecture
+        - Revise the spec when feedback changes a product or architecture decision
+    validation:
+      - stage: Behavior review
+        question: Does the PR do what users expect?
+        check: Scan Given / When / Then cases for missing behavior.
+      - stage: Design review
+        question: Did the PR preserve the agreed architecture?
+        check: Reconstruct the high-level design from the diff and compare it with the spec.
+    metrics:
+      - value: 50+
+        label: Engineers in the spec-driven rollout
+      - value: Four
+        label: Specialist review roles tested
+  - id: certa-audit-logging
+    group: platforms
+    title: Rebuilding Certa’s audit logging
+    role: Designed and built the serverless audit-log service
+    category: Architecture redesign
+    result: Nearly 10,000 audit events per second during migration
+    takeaway: Queue audit events so processing can scale independently during migration and customers keep a traceable history.
+    summary: I re-architected audit logging around SQS, Lambda, and MongoDB to handle migration load while preserving traceability.
+    url: /work/certa-audit-logging/
+    markdown: /work/certa-audit-logging/markdown.txt
+    design:
+      approach: I introduced a queue between event producers and audit processing so the service could absorb migration bursts and process events independently.
+      before_caption: Audit requirement before the redesign
+      before:
+        - Regulated workflows produce activity
+        - Audit logging records that activity
+        - Migration adds a burst of events
+      after_caption: Queued audit logging
+      after:
+        - Audit events enter Amazon SQS
+        - AWS Lambda prepares the audit document without an ORM
+        - Write the document directly to MongoDB
+    validation:
+      - stage: Migration load
+        question: Could the pipeline handle the burst?
+        check: Observed peak throughput near 10,000 events per second and approximately 50 ms of Lambda execution.
+      - stage: Release validation
+        question: How did we check auditability and performance under load?
+        check: The service passed SOC audits, third-party penetration tests, and client load tests.
+    metrics:
+      - value: Nearly 10,000/sec
+        label: Peak event throughput during migration
+      - value: Approx. 50 ms
+        label: Lambda execution time during migration
+  - id: certa-integrations
+    group: platforms
+    title: Extracting Certa’s integration framework
+    role: Designed the service boundary and plug-in connector architecture
+    category: Architecture redesign
+    result: Connector delivery went from weeks to days
+    takeaway: Give connector execution its own boundary so vendor-specific work stays out of the core workflow platform.
+    summary: I moved an incident-prone integration framework into an isolated serverless service that supported roughly 250 configurations.
+    url: /work/certa-integrations/
+    markdown: /work/certa-integrations/markdown.txt
+    design:
+      approach: I isolated integration execution in a serverless service and kept vendor-specific behavior in pluggable connectors.
+      before_caption: Prior integration path
+      before:
+        - Workflow needs an external integration
+        - Existing integration framework runs the connector
+        - Connector communicates with the external system
+      after_caption: Isolated connector service
+      after:
+        - Workflow requests an integration
+        - Isolated serverless service resolves deployment configuration
+        - Plug-in connector handles the vendor-specific contract
+    validation:
+      - stage: Incident baseline
+        question: Was the execution boundary worth changing?
+        check: The old framework accounted for roughly 30% of on-call incidents, making it a clear target for isolation.
+      - stage: Delivery outcome
+        question: Was it easier to add connectors?
+        check: Connector lead time fell from weeks to days. The service supported roughly 250 configurations.
+    metrics:
+      - value: Approx. 30%
+        label: Share of on-call incidents tied to the old framework
+      - value: Approx. 250
+        label: Integration configurations
+      - value: Weeks to days
+        label: Change in connector delivery lead time
+  - id: deckers-allocation
+    group: platforms
+    title: Rebuilding allocation and replenishment at Deckers
+    role: Engineering lead through Toptal, working with Planning and Supply Chain
+    category: Enterprise platform
+    result: MVP to production in about two months
+    takeaway: Give planners across markets one allocation workflow and a record of how each decision was made.
+    summary: I led the move from manual Python workflows to a multi-tenant platform integrated with Oracle RMS, then supported rollout across four markets.
+    url: /work/deckers-allocation/
+    markdown: /work/deckers-allocation/markdown.txt
+    design:
+      approach: I replaced planner handoffs with a shared allocation workflow and kept Oracle RMS integration behind an adapter.
+      before_caption: Manual replenishment workflow
+      before:
+        - SKU data arrives in spreadsheets
+        - Planners run manual Python workflows
+        - Handoffs carry allocation decisions forward
+      after_caption: Multi-tenant allocation platform
+      after:
+        - Standard pipeline ingests SKU spreadsheets
+        - Multi-tenant AWS platform runs allocation and replenishment
+        - SOAP adapter handles Oracle RMS integration
+        - Planners work from auditable allocation decisions
+    validation:
+      - stage: Release readiness
+        question: How did we check allocation behavior before rollout?
+        check: Maintained 90%+ unit test coverage and reached production from MVP in about two months.
+      - stage: Rollout and controls
+        question: What did we verify beyond the first market?
+        check: Supported rollout across North America, EMEA, Japan, and China. The infrastructure passed audit.
+    metrics:
+      - value: Approx. two months
+        label: MVP to production
+      - value: 90%+
+        label: Unit test coverage
+      - value: Four
+        label: Markets supported
+  - id: getloopie-ingestion
+    parent: getloopie
+    title: GetLoopie.ai · Multi-source ingestion
+    role: Designed the ingestion pipeline and built the integrations
+    category: GetLoopie engineering deep dive
+    result: Six work tools fed a shared context pipeline
+    takeaway: Keep the raw history, embed a summary for retrieval, and replay the same inputs when ingestion changes.
+    summary: How we stored raw events in MongoDB, embedded thread summaries in Qdrant, and made ingestion replayable.
+    url: /work/getloopie/ingestion/
+    markdown: /work/getloopie/ingestion/markdown.txt
+    design:
+      approach: I stored raw events in MongoDB, then summarized and linked threads asynchronously so retrieval could operate on a compact representation.
+      before_caption: A commitment crosses tools
+      before:
+        - An action item surfaces in chat or a meeting
+        - Supporting context stays in the source tool
+        - Someone has to find it when the work moves to an issue
+      after_caption: One ingestion boundary
+      after:
+        - Store raw source events in MongoDB
+        - Use a decision model to gate ingestion routing
+        - Assemble each thread and generate a 5W1H summary
+        - Build graph links in MongoDB and embed summaries in Qdrant
+    validation_title: What we could verify
+    validation:
+      - stage: Integration scope
+        question: Could the workflow draw on the tools a team already used?
+        check: The product integrated six work tools, covering chat, issues, service tickets, and meetings.
+      - stage: Downstream retrieval
+        question: Could a test task recover the evidence it needed?
+        check: Replay stored Slack events through ingestion and inspect graph links and expected retrieval results on the demo workspace.
+    metrics:
+      - value: Six
+        label: Connected work tools across chat, issues, service tickets, and meetings
+  - id: getloopie-work-graph
+    parent: getloopie
+    title: GetLoopie.ai · Work Graph and retrieval
+    role: Designed the Work Graph ingestion pipeline and permission-aware retrieval
+    category: GetLoopie engineering deep dive
+    result: Permission checks before ranking and graph traversal
+    takeaway: Build conversation-to-ticket links at ingestion and enforce access before search, ranking, and graph traversal.
+    summary: How I used a Work Graph to organize work context and a separate retrieval step to enforce Slack access boundaries.
+    url: /work/getloopie/work-graph/
+    markdown: /work/getloopie/work-graph/markdown.txt
+    design:
+      approach: I built the Work Graph at ingestion and applied access constraints in the tools, including the deep-dive graph tool.
+      before_caption: Finding the context by hand
+      before:
+        - Start with a commitment or follow-up
+        - Find the related messages and work items
+        - Work out which context can be used
+      after_caption: Permission-aware context assembly
+      after:
+        - Apply the thread access rules in the tool code
+        - Run permission-filtered Qdrant search and LLM reranking
+        - Expand matched threads to linked tickets in MongoDB
+        - Apply the same access rules to deep-dive graph traversal
+    validation_title: Where retrieval evals fit
+    validation:
+      - stage: Access boundary
+        question: Which private Slack messages can enter retrieval?
+        check: Tool code applied thread-level access rules to Qdrant retrieval and graph traversal.
+      - stage: Retrieval eval
+        question: Did the workflow find the expected context?
+        check: Compare retrieved evidence with labeled evidence in the demo Slack dataset. Measure precision, recall, and F1.
+  - id: getloopie-evals
+    parent: getloopie
+    title: GetLoopie.ai · Evaluating agent workflows
+    role: Led product validation and evaluated retrieval, tool use, and answer quality
+    category: GetLoopie engineering deep dive
+    result: 100+ synthetic Slack threads for repeatable evals
+    takeaway: Replay realistic Slack tasks and grade each stage so a failed run points to a specific problem.
+    summary: How we built a multi-user demo Slack, replayed stored events, and traced failures to graph links, retrieval, routing, or groundedness.
+    url: /work/getloopie/evals/
+    markdown: /work/getloopie/evals/markdown.txt
+    design:
+      approach: I used graded checkpoints across the agent workflow so a failed response gave us a specific place to investigate.
+      before_caption: A single end-to-end verdict
+      before:
+        - Give the agent a task
+        - Inspect its final answer or action
+        - Investigate which layer caused a failure
+      after_caption: Replay and inspect each checkpoint
+      after:
+        - Replay captured Slack events through ingestion
+        - Run a golden question in a specific user and thread context
+        - Check links, expected threads, access boundaries, and routing
+        - Grade answer groundedness offline
+    validation_title: Eval checkpoints and metrics
+    validation:
+      - stage: Graph hand-check
+        question: Did the right conversations link to the right tickets?
+        check: Inspect links in the replayed graph, including conversations about the same ticket across channels.
+      - stage: Retrieval
+        question: Did the relevant evidence make it into context?
+        check: Score precision, recall, and F1 against the expected evidence.
+      - stage: Tool use
+        question: Did the agent choose the expected tool across trials?
+        check: Score precision, recall, and F1. Use pass@k for at least one successful trial and pass^k for success in all k trials.
+      - stage: Answer groundedness
+        question: Did the response make claims supported by evidence?
+        check: Grade against a rubric with an LLM judge. We also tried two-pass judging.
+    metrics:
+      - value: 100+
+        label: Hand-written Slack threads
+      - value: Two weeks
+        label: Simulated company activity
+      - value: 3–6 months
+        label: Time spent refining the golden set
+  - id: getloopie-lessons
+    parent: getloopie
+    title: GetLoopie.ai · Mistakes and lessons
+    role: Co-founder focused on product engineering and validation
+    category: GetLoopie engineering retrospective
+    result: What I would change about evals, permissions, and evidence
+    takeaway: Build repeatable evals and a way to trace claims to authorized evidence into the first version.
+    summary: Where manual review, split storage, and a schema-only output contract made the agent harder to validate.
+    url: /work/getloopie/lessons/
+    markdown: /work/getloopie/lessons/markdown.txt
+    design:
+      approach: On a future agent product, I would set a repeatable evaluation baseline and define the evidence contract before expanding coverage.
+      before_caption: What we encountered
+      before:
+        - Inspect answer quality by hand
+        - Enforce permissions across the graph and vector stores
+        - Validate the response structure
+      after_caption: What I would change on the next build
+      after:
+        - Start with a replayable dataset and a holdout set
+        - Test access rules across vector and graph retrieval
+        - Require evidence IDs for important claims
+  - id: review-conventions
+    group: leadership
+    title: Take naming debates out of pull requests
+    role: Engineering leader facilitating a review conflict
+    category: Servant leadership
+    result: Use documented team agreements to resolve recurring style disputes
+    takeaway: For naming and style, reserve blocking review comments for conventions the team has discussed, agreed on, and documented.
+    summary: How I handled a naming disagreement between two senior engineers and gave the team a way to agree on conventions.
+    url: /work/review-conventions/
+    markdown: /work/review-conventions/markdown.txt
+    design:
+      title: How a convention becomes a review rule
+      approach: I moved the discussion from the individual PR to a place where the whole team could make and record the decision.
+      before_caption: A style preference stalls a PR
+      before:
+        - Reviewer raises an unwritten naming preference
+        - Two engineers debate the preference in the PR
+        - The team has no shared rule to apply
+      after_caption: A team agreement guides review
+      after:
+        - Treat undocumented style as a suggestion
+        - Propose the convention and explain the trade-off
+        - Document it if the team agrees
+        - Apply the documented rule in future reviews
+  - id: product-first-engineering
+    group: leadership
+    title: Build for the next product decision
+    role: Hands-on product and engineering leadership
+    category: Product engineering opinion
+    result: Ship a useful slice, learn from it, then invest in scale
+    takeaway: Ship enough to test whether a workflow helps users. Make hard-to-reverse decisions early and scale where usage exposes a bottleneck.
+    summary: How I decide which architectural choices to make early and which to revisit after a product experiment.
+    url: /work/product-first-engineering/
+    markdown: /work/product-first-engineering/markdown.txt
+    design:
+      title: When I invest in scale
+      approach: I start with the user decision the experiment needs to inform and protect the constraints that would be expensive to change.
+      before_caption: Optimize for a forecast
+      before:
+        - Assume future usage and requirements
+        - Build the full architecture up front
+        - Get user feedback after the investment
+      after_caption: Earn the next investment
+      after:
+        - Choose one workflow and a signal of success
+        - Build a small slice with clear boundaries
+        - Observe usage and system behavior
+        - Scale the bottleneck the evidence reveals
+  - id: scaling-a-remote-team
+    group: leadership
+    title: Grow a remote engineering team from 5 to 50
+    role: Founding Backend Engineer to Director of Engineering at Certa
+    category: Remote engineering leadership
+    result: Grew Certa’s remote engineering organization from 5 to 50 through Series B
+    takeaway: I adapted a Spotify-inspired team structure for remote work and paired ownership with proactive, asynchronous communication.
+    summary: Why I chose a Spotify-inspired model at Certa and how I adapted it to a remote-first team.
+    url: /work/scaling-a-remote-team/
+    markdown: /work/scaling-a-remote-team/markdown.txt
+    metrics:
+      - value: 5 to 50
+        label: Engineers as Certa grew through Series B
+    design:
+      title: How I approached team design
+      approach: I looked for a structure that would let teams own decisions and stay aligned as the organization grew.
+      before_caption: Choose a structure that fits
+      before:
+        - Identify where decisions and handoffs need clear owners
+        - Compare structures for a growing remote team
+        - Choose and experiment with a Spotify-inspired model
+      after_caption: Make autonomy workable remotely
+      after:
+        - Give teams clear areas of ownership
+        - Share updates and risks proactively in structured threads
+        - Record decisions and owners so work can continue asynchronously

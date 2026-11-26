@@ -1,0 +1,5 @@
+---
+layout: plain-text
+study_id: certa-integrations
+---
+{% include study-markdown.txt -%}

@@ -1,0 +1,35 @@
+title: "Products and open source"
+intro: "Selected projects in offline AI, property management, marketplaces, and open source."
+prompt: "Open a project for the complete context."
+entries:
+  - title: "Offline warranty validation"
+    meta: "On-device inference · Battery manufacturing"
+    id: offline-warranty
+    open: true
+    paragraphs:
+      - text: "We built warranty validation for a battery manufacturer in India. Vendors in tier-3 cities photographed invoices on budget phones, often with unreliable connectivity. The validation ran on the phone’s CPU so vendors could use it offline."
+      - text: "That work made me wonder what else can run locally. A phone could help a mechanic identify a part from a photo and pull up the right service manual from a local catalog. Google’s Project Astra bike-repair demo explored a related camera-assisted workflow. Pixel’s Tensor chip includes a TPU for on-device AI, which makes accelerator-equipped phones another target to test alongside a CPU baseline. [Google I/O demo](https://www.youtube.com/watch?v=o8NiE3XMPrM&t=2340s) · [Google on Tensor and on-device processing](https://blog.google/innovation-and-ai/products/on-device-processing/)"
+      - text: "[Ideas I’d like to work on](../#ideas)"
+  - title: "101Lease · Civil Machines Technologies"
+    meta: "Co-founder / Founding Engineer-level initiative · Tech Lead"
+    paragraphs:
+      - text: "A modular asset-management product that produced four spin-offs, including one in hospitality."
+    points:
+      - text: "Developed an end-to-end asset-management product using a modular architecture, so teams could reuse modules in new deployments."
+      - text: "Implemented lead management, company hierarchy, asset management, rental collection, client and broker aggregation, deal aggregation, and an analytics dashboard for location insights."
+      - text: "Reduced the lead-management team from **120 to 20** within 30 days of deployment."
+      - text: "Within 60 days of deployment, SafeHoms monthly revenue rose from **INR 80 lakh to INR 1.8 crore**."
+  - title: "Sweet2th · Civil Machines Technologies"
+    meta: "Product Team Lead · Hyperlocal bakery marketplace"
+    paragraphs:
+      - text: "Sweet2th is a hyperlocal marketplace for the Indian bakery industry, connecting consumers, bakers, vendors, and delivery partners."
+    points:
+      - text: "Led an eight-person engineering team through a one-year product-development cycle."
+      - text: "Developed a multi-platform solution with a Django backend, Flutter mobile applications for vendors, consumers, and delivery partners, and React web applications for vendors, consumers, and a live management portal."
+      - text: "Engineered configurable marketplace controls and dynamic payouts and commissions based on grievances, ratings, delivery timing, and orders."
+      - text: "Built grievance handling and delivery-performance monitoring."
+  - title: "[DRF-User](https://github.com/101Loop/drf-user) · 101Loop Tech Community"
+    meta: "Author & Contributor · Open source"
+    points:
+      - text: "Designed and started the development of DRF-User."
+      - text: "DRF-User was one of the winners of the PyCharm Project of the Decade competition."
