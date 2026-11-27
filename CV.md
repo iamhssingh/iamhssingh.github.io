@@ -56,7 +56,7 @@ Joined at the founding-engineer stage and grew with the company through Series B
 
 ### Vitartha LLP: Founder
 
-**2018–2019**
+**May 2017–June 2019**
 
 - Founded a company focused on personal-finance and expense-management products.
 - Developed and launched Hisab Kitab, a personal-finance micro-application.

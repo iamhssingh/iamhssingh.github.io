@@ -43,7 +43,7 @@ Hands-on engineering leader with 11+ years building production platforms across 
 
 ### Vitartha LLP: Founder
 
-**2018–2019**
+**May 2017–June 2019**
 
 - Founded a product company focused on personal-finance and expense-management tools.
 - Launched Hisab Kitab, reaching **5,000+ Android downloads** and **500+ active users organically** within three months.
