@@ -6,7 +6,11 @@ Reading a few agent responses helped us spot obvious problems. It was hard to te
 
 We created a multi-user Slack workspace with roles across backend, frontend, mobile, product, scrum, leadership, sales, and customer success. We hand-wrote **100+ threads**, typically around ten messages each, across **two simulated weeks**. The same ticket could come up in product, engineering, and standup channels. We included private threads, Linear work items, and Fathom summaries. The workspace doubled as the product demo.
 
-We stored the Slack events once in MongoDB and re-ingested them through a replay harness after changes. Golden questions such as a ticket status check pointed to expected linked threads. We manually reviewed unexpected returns and graph links. A valid extra result could expand the gold set. We refined the dataset over roughly **three to six months**.
+We stored the Slack events once in MongoDB and re-ingested them through a replay harness after changes. Golden questions such as a ticket status check pointed to expected linked threads.
+
+## What changed after replay
+
+We reviewed unexpected retrieval results and their graph links against the original Slack conversations. When a returned thread contained valid evidence, we could add it to the expected results for that question. We refined the golden dataset over roughly **three to six months**.
 
 ## Inspect failures where they occur
 

@@ -8,6 +8,16 @@ layout: plain-text
 
 {{ portfolio.intro }}
 
+{{ portfolio.availability }}
+
+Contact: [{{ site.email }}](mailto:{{ site.email }})
+
+## Selected results
+
+{% for outcome in portfolio.home.outcomes -%}
+{% assign study = portfolio.work | where: 'id', outcome.study | first -%}
+- [{{ outcome.value }}]({{ study.markdown | absolute_url }}). {{ outcome.label }}.
+{% endfor %}
 ## Open source and recognitions
 
 {% for entry in site.data.recognitions.entries -%}
@@ -49,4 +59,3 @@ layout: plain-text
 
 - [Experience]({{ '/experience/markdown.txt' | absolute_url }})
 - [Résumé (PDF)]({{ '/himanshushankar/main.pdf' | absolute_url }})
-- [Contact](mailto:{{ site.email }})

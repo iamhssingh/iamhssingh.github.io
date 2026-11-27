@@ -40,11 +40,11 @@ layout: default
   </section>
   {% endif %}
   {% if study.architecture_with_evals %}
+  {% include getloopie-architecture.html %}
   <details class="case-technical-details">
-    <summary>Product, architecture, and evaluation details</summary>
+    <summary>Product and evaluation details</summary>
   {% capture product %}{% include getloopie-product.md %}{% endcapture %}
   {{ product | markdownify }}
-  {% include getloopie-architecture.html %}
   {% elsif study.design %}
   {% include case-design.html study=study %}
   {% endif %}

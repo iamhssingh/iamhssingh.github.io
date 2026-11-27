@@ -9,7 +9,7 @@ The links below serve complete page content as plain-text Markdown, including te
 
 ## Portfolio in Markdown
 
-- [Portfolio profile]({{ '/profile.txt' | absolute_url }}): Role, selected work, and current interests.
+- [Portfolio profile]({{ '/profile.txt' | absolute_url }}): Role, availability, contact details, and selected results.
 - [Case studies]({{ '/work/markdown.txt' | absolute_url }}): Case studies by topic and the GetLoopie deep dives.
 {% for study in site.data.portfolio.work -%}
 - [{{ study.title }}]({{ study.markdown | absolute_url }}): {{ study.summary }}

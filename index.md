@@ -11,7 +11,19 @@ markdown_url: /profile.txt
   <h1 id="hero-title">{{ site.title | escape }}</h1>
   <p class="hero-role">{{ portfolio.role | escape }}</p>
   <p class="hero-intro">{{ portfolio.intro | escape }}</p>
-  <a class="contact-button" href="mailto:{{ site.email }}">Let’s talk</a>
+  <p class="hero-availability">{{ portfolio.availability | escape }}</p>
+  <a class="contact-button" href="mailto:{{ site.email }}">Email me about a role</a>
+  <ul class="hero-outcomes" aria-label="Selected results" role="list">
+    {% for outcome in portfolio.home.outcomes %}
+    {% assign study = portfolio.work | where: 'id', outcome.study | first %}
+    <li>
+      <a href="{{ study.url | relative_url }}">
+        <strong>{{ outcome.value | escape }}</strong>
+        <span>{{ outcome.label | escape }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section class="section" aria-labelledby="recognitions-title">

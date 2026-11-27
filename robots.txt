@@ -14,15 +14,10 @@ Disallow: /
 User-agent: ClaudeBot
 Disallow: /
 
+# Claude's search and user-requested fetches may read the public site.
 User-agent: Claude-SearchBot
-Disallow: /
-
 User-agent: Claude-User
-Allow: /$
-Allow: /llms.txt$
-Allow: /profile.txt$
-Allow: /*/markdown.txt$
-Disallow: /
+Allow: /
 
 User-agent: PerplexityBot
 Disallow: /
@@ -30,7 +25,18 @@ Disallow: /
 User-agent: Perplexity-User
 Disallow: /
 
+# Google-Extended covers both Gemini grounding and model training.
+# Limit those uses to the public portfolio pages and their text versions.
 User-agent: Google-Extended
+Allow: /$
+Allow: /index.html$
+Allow: /llms.txt$
+Allow: /profile.txt$
+Allow: /work/
+Allow: /experience/
+Allow: /recognitions/
+Allow: /consulting/
+Allow: /projects/
 Disallow: /
 
 User-agent: Applebot-Extended
@@ -53,3 +59,5 @@ Disallow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://himanshus.com/sitemap.xml

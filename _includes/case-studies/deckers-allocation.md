@@ -1,3 +1,5 @@
+This case study summarizes my work and the rollout. Client source code and internal documents are omitted.
+
 ## Make allocation decisions repeatable
 
 Deckers planners relied on manual Python workflows and spreadsheet handoffs for inventory allocation and replenishment. I led engineering through Toptal and co-owned the roadmap with Planning and Supply Chain. We needed a common workflow planners could use across markets and an audit trail that explained each decision.

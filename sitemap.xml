@@ -1,0 +1,12 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign portfolio_pages = site.pages | where_exp: 'page', 'page.markdown_url' | sort: 'url' %}
+  {% for page in portfolio_pages %}
+  <url>
+    <loc>{{ page.url | replace: '/index.html', '/' | absolute_url | xml_escape }}</loc>
+  </url>
+  {% endfor %}
+</urlset>
