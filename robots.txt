@@ -4,19 +4,13 @@ Disallow: /
 User-agent: OAI-SearchBot
 Disallow: /
 
-User-agent: ChatGPT-User
-Allow: /$
-Allow: /llms.txt$
-Allow: /profile.txt$
-Allow: /*/markdown.txt$
-Disallow: /
-
 User-agent: ClaudeBot
 Disallow: /
 
-# Claude's search and user-requested fetches may read the public site.
+# Claude search and user-requested fetches may read the public site.
 User-agent: Claude-SearchBot
 User-agent: Claude-User
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: PerplexityBot

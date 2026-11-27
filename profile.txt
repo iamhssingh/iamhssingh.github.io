@@ -12,12 +12,14 @@ layout: plain-text
 
 Contact: [{{ site.email }}](mailto:{{ site.email }})
 
-## Selected results
+## Selected case studies
 
-{% for outcome in portfolio.home.outcomes -%}
-{% assign study = portfolio.work | where: 'id', outcome.study | first -%}
-- [{{ outcome.value }}]({{ study.markdown | absolute_url }}). {{ outcome.label }}.
+{% for item in portfolio.home.case_studies -%}
+{% assign study = portfolio.work | where: 'id', item.study | first -%}
+- [{{ item.title | default: study.title }}]({{ study.markdown | absolute_url }}). **{{ item.value }}.** {{ item.label }} {{ item.approach }}
 {% endfor %}
+[View all case studies]({{ '/work/markdown.txt' | absolute_url }})
+
 ## Open source and recognitions
 
 {% for entry in site.data.recognitions.entries -%}
@@ -26,14 +28,6 @@ Contact: [{{ site.email }}](mailto:{{ site.email }})
 {% endif -%}
 {% endfor %}
 [All recognitions]({{ '/recognitions/markdown.txt' | absolute_url }})
-
-## Selected case studies
-
-{% for study_id in portfolio.home.case_studies -%}
-{% assign study = portfolio.work | where: 'id', study_id | first -%}
-- [{{ study.title }}]({{ study.markdown | absolute_url }}). {{ study.result }}.
-{% endfor %}
-[All case studies]({{ '/work/markdown.txt' | absolute_url }})
 
 ## How I lead engineering
 
@@ -46,12 +40,9 @@ Contact: [{{ site.email }}](mailto:{{ site.email }})
 
 ## Ideas I'd like to work on
 
-{{ portfolio.interests.intro }}
-
 {% for topic in portfolio.interests.topics -%}
-- **{{ topic.title }}.** {{ topic.question }}
+- **{{ topic.title }}.** {{ topic.question }}{% if topic.example %} [{{ topic.example.title }}]({{ topic.example.markdown | absolute_url }}). {{ topic.example.description }}{% endif %}
 {% endfor %}
-[Offline warranty validation project]({{ '/projects/markdown.txt' | absolute_url }})
 
 ## Work with me
 

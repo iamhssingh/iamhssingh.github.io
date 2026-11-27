@@ -1,35 +1,44 @@
-role: Hands-on engineering leader in applied AI
-intro: I led product engineering at GetLoopie.ai, the agent startup I co-founded. At Certa, I went from founding backend engineer to Director of Engineering.
-availability: I’m open to Staff Engineer and Senior Engineering Manager roles with remote-first teams building applied AI products or scaling production platforms.
+role: Engineering lead for AI agents and production platforms
+intro: I co-founded GetLoopie.ai, where I built a Slack agent and its evaluation workflow. At Certa, I went from founding backend engineer to Director of Engineering.
+availability: I’m open to Staff Engineer and Senior Engineering Manager roles on remote-first teams. In either role, I want to own architecture and help teams ship and operate what they build.
 fit: I work best with teams that need someone to own the architecture, stay close to the code, and work directly with customers as the product grows.
 
 home:
-  outcomes:
-    - study: certa-data-ai
-      value: Under two weeks
-      label: Vendor RFP turnaround, down from 1–3 months
-    - study: certa-audit-logging
-      value: Nearly 10,000/sec
-      label: Peak audit events processed during Certa’s migration
-    - study: scaling-a-remote-team
-      value: 5 to 50 engineers
-      label: Certa’s remote team growth through Series B
   case_studies:
-    - getloopie
-    - certa-data-ai
-    - certa-audit-logging
+    - study: certa-data-ai
+      title: Certa’s RFP automation
+      value: Under two weeks
+      label: Vendor RFP turnaround, down from 1–3 months.
+      approach: I prefilled answers from existing documents and public sources, with a citation next to each answer for vendor review.
+    - study: certa-audit-logging
+      title: Certa’s audit logging
+      value: Nearly 10,000 events/sec
+      label: Peak throughput during the audit-log migration.
+      approach: I used SQS to buffer traffic bursts and Lambda to write audit records directly to MongoDB.
+    - study: scaling-a-remote-team
+      title: Scaling Certa’s remote team
+      value: 5 to 50 engineers
+      label: Remote team growth through Series B.
+      approach: I gave teams clear areas of ownership and used written updates and decision records to coordinate across time zones.
+    - study: getloopie
+      value: Five pilots
+      label: A Slack agent for engineering follow-up.
+      approach: I linked Slack threads, meeting notes, and issue trackers, then replayed test conversations to evaluate retrieval and tool use.
   leadership:
     - ai-in-engineering
     - review-conventions
     - product-first-engineering
-    - scaling-a-remote-team
   leadership_intro: I lean toward servant leadership. I try to remove friction, make decisions visible, and give teams room to own the work.
 
 interests:
-  intro: I’m open to hands-on applied AI, platform engineering, and engineering leadership. These are three questions I’d especially like to work on or discuss.
   topics:
     - title: Enterprise edge AI
       question: What can a field technician do when the phone loses signal? I’m interested in using the camera to identify parts and find the right service instructions locally.
+      example:
+        title: Offline warranty validation
+        url: /projects/#offline-warranty
+        markdown: /projects/markdown.txt
+        description: We ran invoice validation on budget phones so vendors could check warranty claims without a network connection.
     - title: AI at scale
       question: How do we take a useful pilot into production and keep its quality, permissions, latency, and cost under control as usage grows?
     - title: AI in business processes

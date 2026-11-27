@@ -6,7 +6,7 @@
     <meta name="robots" content="index, follow">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#fdfcf9">
-    {% capture page_title %}{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}{% endcapture %}
+    {% capture page_title %}{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}{% if page.url == '/' %} · {{ site.data.portfolio.role }}{% endif %}{% endcapture %}
     {% assign page_description = page.description | default: site.description %}
     {% assign canonical_url = page.url | replace: '/index.html', '/' | absolute_url %}
     {% assign social_image = '/assets/images/social-card.png' | absolute_url %}
@@ -21,12 +21,13 @@
     <meta property="og:image" content="{{ social_image }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Himanshu Shankar, hands-on engineering leader in applied AI">
+    {% assign social_image_alt = site.title | append: ', ' | append: site.data.portfolio.role %}
+    <meta property="og:image:alt" content="{{ social_image_alt | escape }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page_title | escape }}">
     <meta name="twitter:description" content="{{ page_description | escape }}">
     <meta name="twitter:image" content="{{ social_image }}">
-    <meta name="twitter:image:alt" content="Himanshu Shankar, hands-on engineering leader in applied AI">
+    <meta name="twitter:image:alt" content="{{ social_image_alt | escape }}">
     {% if page.url == '/' %}
     <script type="application/ld+json">
       {
@@ -65,7 +66,9 @@
           <a href="{{ '/experience/' | relative_url }}"{% if page.url == '/experience/' %} aria-current="page"{% endif %}>Experience</a>
           <a href="{{ '/recognitions/' | relative_url }}"{% if page.url == '/recognitions/' %} aria-current="page"{% endif %}>Recognitions</a>
           <a href="{{ '/himanshushankar/main.pdf' | relative_url }}">Résumé</a>
+          {% unless page.url == '/' %}
           <a class="contact-button" href="mailto:{{ site.email }}">Email me</a>
+          {% endunless %}
         </nav>
       </div>
     </header>
