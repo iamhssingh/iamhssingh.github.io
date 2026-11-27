@@ -5,6 +5,7 @@ User-agent: OAI-SearchBot
 Disallow: /
 
 User-agent: ChatGPT-User
+Allow: /$
 Allow: /llms.txt$
 Allow: /profile.txt$
 Allow: /*/markdown.txt$
@@ -17,6 +18,7 @@ User-agent: Claude-SearchBot
 Disallow: /
 
 User-agent: Claude-User
+Allow: /$
 Allow: /llms.txt$
 Allow: /profile.txt$
 Allow: /*/markdown.txt$
